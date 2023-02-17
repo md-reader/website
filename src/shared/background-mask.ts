@@ -13,12 +13,15 @@ class BackgroundMask {
   x1: number = 0;
   x2: number = 0;
   step1: number = 0.8;
-  step2: number = 0.4;
+  step2: number = -0.6;
   size: number = 140;
-  ls: Array<any> = new Array(6);
+  halfSize: number = this.size / 2;
+  itemCount: number = 6;
+  ls: any[] = [];
   mask: HTMLElement | undefined;
 
   register() {
+    this.ls = new Array(this.itemCount).fill(1);
     this.initMaskEle();
     this.initCssProperty();
     this.animate();
@@ -38,19 +41,14 @@ class BackgroundMask {
     const root = document.querySelector<HTMLElement>(":root");
     if (!root) return;
 
+    this.ls.fill(this.size);
     root.style.setProperty(
       "--background-mask-position-y-1",
-      this.ls
-        .fill(this.size)
-        .map((s, i) => s * i * 2 + "px")
-        .join(",")
+      this.ls.map((s, i) => s * i * 2 + "px").join(",")
     );
     root.style.setProperty(
       "--background-mask-position-y-2",
-      this.ls
-        .fill(this.size)
-        .map((s, i) => s * (i * 2 + 1) + "px")
-        .join(",")
+      this.ls.map((s, i) => s * (i * 2 + 1) + "px").join(",")
     );
     root.style.setProperty(
       "--background-mask-image-1",
@@ -65,20 +63,14 @@ class BackgroundMask {
   animate(): number {
     return requestAnimationFrame(() => {
       this.x1 += this.step1;
-      this.x2 -= this.step2;
+      this.x2 += this.step2;
       this.mask!.style.setProperty(
         "--background-mask-position-x-1",
-        this.ls
-          .fill(this.x1)
-          .map((x, i) => x + i * 100 + "px")
-          .join(",")
+        this.ls.map((_, i) => `${this.x1 + i * this.halfSize}px`).join(",")
       );
       this.mask!.style.setProperty(
         "--background-mask-position-x-2",
-        this.ls
-          .fill(this.x2)
-          .map((x, i) => x + i * 100 + "px")
-          .join(",")
+        this.ls.map((_, i) => `${this.x2 + i * this.halfSize}px`).join(",")
       );
       return this.animate();
     });
