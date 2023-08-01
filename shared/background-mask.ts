@@ -16,7 +16,7 @@ class BackgroundMask {
   step2: number = -0.6;
   size: number = 140;
   halfSize: number = this.size / 2;
-  itemCount: number = 6;
+  itemCount: number = 10;
   ls: any[] = [];
   mask: HTMLElement | undefined;
 
@@ -66,11 +66,11 @@ class BackgroundMask {
       this.x2 += this.step2;
       this.mask!.style.setProperty(
         "--background-mask-position-x-1",
-        this.ls.map((_, i) => `${this.x1 + i * this.halfSize}px`).join(",")
+        this.ls.map((_, i) => `${(this.x1 + i * this.halfSize).toFixed(2)}px`).join(",")
       );
       this.mask!.style.setProperty(
         "--background-mask-position-x-2",
-        this.ls.map((_, i) => `${this.x2 + i * this.halfSize}px`).join(",")
+        this.ls.map((_, i) => `${(this.x2 + i * this.halfSize).toFixed(2)}px`).join(",")
       );
       return this.animate();
     });
