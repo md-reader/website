@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
   app: {
+    buildAssetsDir: 'nuxt',
     cdnURL: '.'
   }
 })
