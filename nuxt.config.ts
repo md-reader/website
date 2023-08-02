@@ -4,6 +4,5 @@ export default defineNuxtConfig({
   ssr: true,
   app: {
     buildAssetsDir: 'nuxt',
-    cdnURL: '.'
   }
 })
