@@ -51,5 +51,6 @@ nav {
 
 footer {
   text-align: center;
+  color: var(--color-desc);
 }
 </style>

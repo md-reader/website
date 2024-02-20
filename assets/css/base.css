@@ -37,6 +37,7 @@
 
   --color-heading: var(--v-text-light-1);
   --color-text: var(--v-text-light-1);
+  --color-desc: var(--v-text-light-2);
 
   --section-gap: 160px;
 }
@@ -53,7 +54,8 @@
     --color-border-hover: var(--v-divider-dark-1);
 
     --color-heading: var(--v-text-dark-1);
-    --color-text: var(--v-text-dark-2);
+    --color-text: var(--v-text-dark-1);
+    --color-desc: var(--v-text-dark-2);
   }
 }
 
