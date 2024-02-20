@@ -1,5 +1,5 @@
-import logo from "../assets/logo.svg";
-import logoContour from "../assets/logo-contour.svg";
+import logo1 from "../assets/logo-bg-1.svg";
+import logo2 from "../assets/logo-bg-2.svg";
 import { onMounted, onUnmounted } from "vue";
 
 export function useBackgroundMask() {
@@ -52,11 +52,11 @@ class BackgroundMask {
     );
     root.style.setProperty(
       "--background-mask-image-1",
-      this.ls.fill(`url(${logo})`).join(",")
+      this.ls.fill(`url(${logo1})`).join(",")
     );
     root.style.setProperty(
       "--background-mask-image-2",
-      this.ls.fill(`url(${logoContour})`).join(",")
+      this.ls.fill(`url(${logo2})`).join(",")
     );
   }
 

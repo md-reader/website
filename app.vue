@@ -8,6 +8,7 @@
   </Head>
 
   <header>
+    <MDLogo></MDLogo>
     <nav>
       <NuxtLink custom draggable="false" to="/" v-slot="{ navigate, isExactActive }">
         <NavLink :class="{ isExactActive }" @click="navigate">Home</NavLink>
@@ -16,28 +17,39 @@
         <NavLink :class="{ isExactActive }" @click="navigate">About</NavLink>
       </NuxtLink>
     </nav>
+    <Actions></Actions>
   </header>
 
   <NuxtPage></NuxtPage>
+
+  <footer>Copyright ©2018-2024 Bener.</footer>
 </template>
 
 <script setup lang="ts">
 import { useBackgroundMask } from "./shared";
+import MDLogo from './components/logo.vue'
 import NavLink from "./components/nav-link.vue";
+import Actions from "./components/actions.vue";
 import '~/assets/css/main.css'
 useBackgroundMask();
 </script>
 
 <style scoped>
 header {
-  line-height: 1.8;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 80px;
 }
 
 nav {
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
-  margin-top: 1rem;
   user-select: none;
   color: var(--color-heading);
+}
+
+footer {
+  text-align: center;
 }
 </style>

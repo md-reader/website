@@ -8,11 +8,12 @@
 a {
   position: relative;
   display: inline-block;
+  line-height: 32px;
   padding: 0 0.8rem;
   font-weight: bold;
-  color: #607cd2;
+  color: var(--color-primary);
   transition: transform 0.3s;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 a::before {

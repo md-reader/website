@@ -10,6 +10,9 @@
 
   --v-indigo: #2c3e50;
 
+  --v-primary-light-1: #607cd2;
+  --v-primary-dark-1: #98ace9;
+
   --v-divider-light-1: rgba(60, 60, 60, 0.29);
   --v-divider-light-2: rgba(60, 60, 60, 0.12);
   --v-divider-dark-1: rgba(84, 84, 84, 0.65);
@@ -23,6 +26,8 @@
 
 /* semantic color variables for this project */
 :root {
+  --color-primary: var(--v-primary-light-1);
+
   --color-background: var(--v-white);
   --color-background-soft: var(--v-white-soft);
   --color-background-mute: var(--v-white-mute);
@@ -38,6 +43,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --color-primary: var(--v-primary-dark-1);
+
     --color-background: var(--v-black);
     --color-background-soft: var(--v-black-soft);
     --color-background-mute: var(--v-black-mute);
@@ -60,8 +67,8 @@
 }
 
 @font-face {
-  font-family: 'DINAlternate';
-  src: url('../fonts/DINAlternate-Bold.woff') format('woff');
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins.woff2') format('woff2');
 }
 
 body {
@@ -71,7 +78,7 @@ body {
   background: var(--color-background-soft);
   transition: color 0.3s, background-color 0.3s;
   line-height: 1.6;
-  font-family: Arial, "幼圆", Inter, -apple-system, BlinkMacSystemFont,
+  font-family: "Poppins", Arial, "幼圆", Inter, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   font-size: 15px;
