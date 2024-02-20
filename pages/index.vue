@@ -23,7 +23,12 @@
 
 h1 {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 46px;
+}
+
+p {
+  font-size: 16px;
+  color: var(--color-desc);
 }
 
 .downloads {

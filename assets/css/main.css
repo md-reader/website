@@ -12,6 +12,11 @@ a {
   color: currentColor;
 }
 
+a:hover,
+a:active {
+  color: var(--color-primary);
+}
+
 .background-mask {
   position: absolute;
   left: 0;
@@ -19,7 +24,7 @@ a {
   right: 0;
   bottom: 0;
   z-index: -1;
-  opacity: 0.05;
+  opacity: 0.08;
   -webkit-user-select: none;
   user-select: none;
   pointer-events: none;

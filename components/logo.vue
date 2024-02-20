@@ -8,6 +8,7 @@ a {
   align-items: center;
   font-size: 18px;
   font-weight: bold;
+  color: var(--color-text);
 }
 
 img {

@@ -22,7 +22,15 @@
 
   <NuxtPage></NuxtPage>
 
-  <footer>Copyright ©2018-2024 Bener.</footer>
+  <footer>
+    <span class="cpr">
+      Copyright ©2018-2024 <a href="https://github.com/Heroor">Bener</a>
+    </span>
+    <a class="link" href="/help">Help</a>
+    <a class="link" href="/feedback">Feedback</a>
+    <a class="link" href="https://github.com/md-reader/markdown-reader">GitHub</a>
+    <a class="link" href="mailto:mkdreader@gmail.com">Email</a>
+  </footer>
 </template>
 
 <script setup lang="ts">
@@ -43,7 +51,7 @@ header {
 }
 
 nav {
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
   user-select: none;
   color: var(--color-heading);
@@ -51,6 +59,15 @@ nav {
 
 footer {
   text-align: center;
+  font-size: 13px;
   color: var(--color-desc);
+}
+
+footer .cpr {
+  margin-right: 6px;
+}
+
+footer .link {
+  margin: 0 6px;
 }
 </style>

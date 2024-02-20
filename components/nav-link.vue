@@ -32,7 +32,7 @@ a::before {
 }
 
 a:not(:first-of-type) {
-  margin-left: 0.8rem;
+  margin-left: 0.6rem;
 }
 
 a:hover::before {
