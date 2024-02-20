@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build project
+        run: npx pnpm i && npm run build && npm run generate
+
+      - name: Clone website repo
+        uses: GuillaumeFalourd/clone-github-repo-action@v1
+        with:
+          owner: md-reader
+          repository: md-reader.github.io
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Deploy website
+        run: |
+          sudo chown -R $USER:$USER ./md-reader.github.io
+          cd md-reader.github.io
+          rm -rf ./docs/*
+          cp -r ../.output/public/* ./docs/
+          git config user.name ${{ secrets.REPO_USER }}
+          git config user.email ${{ secrets.REPO_EMAIL }}
+          git add .
+          git commit -m 'CI BUILD'
+          git push origin main
