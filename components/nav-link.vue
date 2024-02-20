@@ -1,15 +1,18 @@
 <template>
-  <a v-bind="$attrs"><slot></slot></a>
+  <a v-bind="$attrs">
+    <slot></slot>
+  </a>
 </template>
 
 <style scoped>
 a {
   position: relative;
   display: inline-block;
-  padding: 0 1.2rem;
+  padding: 0 0.8rem;
   font-weight: bold;
   color: #607cd2;
   transition: transform 0.3s;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
 }
 
 a::before {
@@ -17,7 +20,7 @@ a::before {
   width: 100%;
   height: 100%;
   left: 0;
-  bottom: -50%;
+  bottom: -45%;
   position: absolute;
   border-radius: 10px;
   opacity: 0.25;
@@ -27,8 +30,8 @@ a::before {
   background: transparent;
 }
 
-a:last-of-type {
-  margin-left: 0.4rem;
+a:not(:first-of-type) {
+  margin-left: 0.8rem;
 }
 
 a:hover::before {
@@ -42,15 +45,20 @@ a:active {
 }
 
 a:active::before {
-  opacity: 0.35;
+  opacity: 0.3;
+  transform: scaleY(0.14) scaleX(0.45);
+  background: currentColor;
 }
 
-a:active::before,
+a.isExactActive {
+  backdrop-filter: blur(4px);
+}
+
 a.isExactActive::before {
   bottom: 0;
   transform: scale(1);
-  transition: opacity 0.3s, bottom 0.1s ease-in-out, transform 0.3s,
+  transition: opacity 0.3s, bottom 0.11s ease-in-out, transform 0.3s,
     background 0.05s;
-  background: currentColor;
+  background: rgba(96, 125, 210, 0.85);
 }
 </style>
