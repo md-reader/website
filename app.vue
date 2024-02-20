@@ -4,7 +4,7 @@
     <Link rel="icon" href="favicon.ico" />
     <Meta name="description" content="md-reader's website" />
     <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <Title>md-reader</Title>
+    <Title>Markdown Reader</Title>
   </Head>
 
   <header>
