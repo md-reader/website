@@ -24,12 +24,24 @@
 
   <footer>
     <span class="cpr">
-      Copyright ©2018-2024 <a href="https://github.com/Heroor">Bener</a>
+      Copyright © 2018-2024 <NuxtLink target="_blank" to="https://github.com/Heroor">Bener</NuxtLink>.
     </span>
-    <a class="link" href="/help">Help</a>
-    <a class="link" href="/feedback">Feedback</a>
-    <a class="link" href="https://github.com/md-reader/markdown-reader">GitHub</a>
-    <a class="link" href="mailto:mkdreader@gmail.com">Email</a>
+    <nav>
+      <ul>
+        <li>
+          <NuxtLink class="link" to="/help">Help</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink class="link" to="/feedback">Feedback</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink class="link" target="_blank" to="https://github.com/md-reader/markdown-reader">GitHub</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink class="link" to="mailto:mkdreader@gmail.com">Email</NuxtLink>
+        </li>
+      </ul>
+    </nav>
   </footer>
 </template>
 
@@ -50,7 +62,7 @@ header {
   margin-bottom: 80px;
 }
 
-nav {
+header nav {
   font-size: 15px;
   text-align: center;
   user-select: none;
@@ -67,7 +79,16 @@ footer .cpr {
   margin-right: 6px;
 }
 
-footer .link {
-  margin: 0 6px;
+footer nav {
+  display: inline;
+}
+
+footer nav ul {
+  display: inline;
+}
+
+footer nav ul li {
+  display: inline;
+  margin: 0 8px;
 }
 </style>

@@ -17,6 +17,12 @@ a:active {
   color: var(--color-primary);
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .background-mask {
   position: absolute;
   left: 0;

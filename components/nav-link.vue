@@ -58,7 +58,7 @@ a.isExactActive {
 a.isExactActive::before {
   bottom: 0;
   transform: scale(1);
-  transition: opacity 0.3s, bottom 0.11s ease-in-out, transform 0.3s,
+  transition: opacity 0.3s, bottom 0.15s ease-in-out, transform 0.3s 0.05s,
     background 0.05s;
   background: rgba(96, 125, 210, 0.85);
 }

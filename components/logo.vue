@@ -1,9 +1,11 @@
 <template>
-  <a href="https://md-reader.github.io/"><img src="../assets/logo-stroke.svg" alt="logo">Markdown Reader</a>
+  <NuxtLink class="logo" to="/">
+    <img src="../assets/logo-stroke.svg" alt="logo">Markdown Reader
+  </NuxtLink>
 </template>
 
 <style scoped>
-a {
+.logo {
   display: flex;
   align-items: center;
   font-size: 18px;
