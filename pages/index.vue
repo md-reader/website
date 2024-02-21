@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <h1>Make reading Markdown easier!</h1>
+    <h1>Make reading <b>Markdown</b> easier!</h1>
     <p>Extremely fast rendering, multi-plugin, dual-theme markdown reading extension.</p>
     <!-- <p>Support: Chrome/Firefox/Edge/Safari</p> -->
     <div class="downloads">
@@ -24,6 +24,11 @@
 h1 {
   font-weight: bold;
   font-size: 46px;
+}
+
+b {
+  font-weight: bold;
+  color: var(--color-primary)
 }
 
 p {
