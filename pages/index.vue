@@ -10,12 +10,17 @@
       </NuxtLink>
     </div>
     <div class="banner">
-      <img src="@/assets/banner.png" alt="">
+      <img :src="isDark ? darkBanner : lightBanner" alt="">
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import lightBanner from '@/assets/banner-light.png'
+import darkBanner from '@/assets/banner-dark.png'
+const colorMode = useColorMode()
+const isDark = computed(() => colorMode.value === 'dark')
+
 </script>
 
 <style scoped>

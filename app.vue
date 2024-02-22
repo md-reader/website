@@ -10,14 +10,14 @@
   <header>
     <MDLogo></MDLogo>
     <nav class="min-w-fit">
-      <NuxtLink custom draggable="false" to="/" v-slot="{ navigate, isExactActive }">
+      <NuxtLink custom to="/" v-slot="{ navigate, isExactActive }">
         <NavLink :class="{ isExactActive }" @click="navigate">Home</NavLink>
       </NuxtLink>
-      <NuxtLink custom draggable="false" to="/about" v-slot="{ navigate, isExactActive }">
+      <NuxtLink custom to="/about" v-slot="{ navigate, isExactActive }">
         <NavLink :class="{ isExactActive }" @click="navigate">About</NavLink>
       </NuxtLink>
     </nav>
-    <HeaderActions class="flex justify-end"></HeaderActions>
+    <HeaderActions></HeaderActions>
   </header>
 
   <NuxtPage></NuxtPage>

@@ -60,6 +60,6 @@ a.isExactActive::before {
   transform: scale(1);
   transition: opacity 0.3s, bottom 0.15s ease-in-out, transform 0.3s 0.05s,
     background 0.05s;
-  background: rgba(96, 125, 210, 0.85);
+  background: rgba(107, 139, 235, 0.85);
 }
 </style>

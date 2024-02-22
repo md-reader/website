@@ -5,5 +5,8 @@ export default defineNuxtConfig({
   ssr: true,
   app: {
     buildAssetsDir: 'nuxt',
-  }
+  },
+  ui: {
+    icons: ['mdi']
+  },
 })
