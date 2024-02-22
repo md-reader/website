@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <h1>About page</h1>
+    <h1 class="text-3xl font-bold">Coming soon</h1>
   </div>
 </template>
 

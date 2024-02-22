@@ -29,12 +29,13 @@ const isDark = computed(() => colorMode.value === 'dark')
 }
 
 h1 {
+  line-height: 1.2;
   font-weight: bold;
   font-size: 46px;
+  margin-bottom: 10px;
 }
 
 b {
-  font-weight: bold;
   color: var(--color-primary)
 }
 

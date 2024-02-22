@@ -59,7 +59,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
-  margin-bottom: 80px;
+  margin-bottom: 90px;
 }
 
 header nav {
