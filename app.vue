@@ -9,7 +9,7 @@
 
   <header>
     <MDLogo></MDLogo>
-    <nav>
+    <nav class="min-w-fit">
       <NuxtLink custom draggable="false" to="/" v-slot="{ navigate, isExactActive }">
         <NavLink :class="{ isExactActive }" @click="navigate">Home</NavLink>
       </NuxtLink>
@@ -17,7 +17,7 @@
         <NavLink :class="{ isExactActive }" @click="navigate">About</NavLink>
       </NuxtLink>
     </nav>
-    <Actions></Actions>
+    <HeaderActions class="flex justify-end"></HeaderActions>
   </header>
 
   <NuxtPage></NuxtPage>
@@ -49,7 +49,7 @@
 import { useBackgroundMask } from "./shared";
 import MDLogo from './components/logo.vue'
 import NavLink from "./components/nav-link.vue";
-import Actions from "./components/actions.vue";
+import HeaderActions from "./components/header-actions.vue";
 import '~/assets/css/main.css'
 useBackgroundMask();
 </script>
@@ -67,6 +67,10 @@ header nav {
   text-align: center;
   user-select: none;
   color: var(--color-heading);
+}
+
+header>* {
+  flex: 1;
 }
 
 footer {

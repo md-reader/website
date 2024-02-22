@@ -14,5 +14,8 @@
     "@nuxt/devtools": "latest",
     "@types/node": "^18.17.1",
     "nuxt": "^3.6.5"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^2.13.0"
   }
 }

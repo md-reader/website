@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <h1>Help page</h1>
+    <h1>Coming soon</h1>
   </div>
 </template>
 

@@ -4,8 +4,10 @@
     <p>Extremely fast rendering, multi-plugin, dual-theme markdown reading extension.</p>
     <!-- <p>Support: Chrome/Firefox/Edge/Safari</p> -->
     <div class="downloads">
-      <a href="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg" target="_blank"><img
-          class="chrome-web-store" src="@/assets/chrome-web-store.png" alt=""></a>
+      <NuxtLink to="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg" target="_blank">
+        <img class="chrome-web-store inline-block dark:opacity-90" src="@/assets/chrome-web-store.png"
+          alt="chrome-web-store">
+      </NuxtLink>
     </div>
     <div class="banner">
       <img src="@/assets/banner.png" alt="">

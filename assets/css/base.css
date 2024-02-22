@@ -59,6 +59,21 @@
   }
 }
 
+:root.dark {
+  --color-primary: var(--v-primary-dark-1);
+
+  --color-background: var(--v-black);
+  --color-background-soft: var(--v-black-soft);
+  --color-background-mute: var(--v-black-mute);
+
+  --color-border: var(--v-divider-dark-2);
+  --color-border-hover: var(--v-divider-dark-1);
+
+  --color-heading: var(--v-text-dark-1);
+  --color-text: var(--v-text-dark-1);
+  --color-desc: var(--v-text-dark-2);
+}
+
 *,
 *::before,
 *::after {

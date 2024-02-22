@@ -1,6 +1,7 @@
 <template>
   <NuxtLink class="logo" to="/">
-    <img src="../assets/logo-stroke.svg" alt="logo">Markdown Reader
+    <img src="../assets/logo-stroke.svg" alt="logo">
+    <span class="hidden md:inline font-bold">Markdown Reader</span>
   </NuxtLink>
 </template>
 
