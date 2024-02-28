@@ -29,7 +29,7 @@
     <nav>
       <ul>
         <li>
-          <NuxtLink class="link" to="/help">Help</NuxtLink>
+          <NuxtLink class="link" to="/support">Support</NuxtLink>
         </li>
         <li>
           <NuxtLink class="link" to="/feedback">Feedback</NuxtLink>
