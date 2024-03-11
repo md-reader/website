@@ -36,6 +36,7 @@ ul {
   pointer-events: none;
   overflow: hidden;
   transform: rotateZ(0);
+  filter: blur(4px);
   --background-mask-size: 170px;
 }
 
