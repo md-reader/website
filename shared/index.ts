@@ -1,1 +1,1 @@
-export * from "./background-mask";
+export * from './background-mask'
