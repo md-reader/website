@@ -88,6 +88,11 @@
   src: url('../fonts/Poppins.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'InterTight';
+  src: url('../fonts/InterTight.woff') format('woff');
+}
+
 body {
   min-height: 100vh;
   color: var(--color-text);
@@ -95,11 +100,17 @@ body {
   background: var(--color-background-soft);
   transition: color 0.3s, background-color 0.3s;
   line-height: 1.6;
-  font-family: "Poppins", Arial, "幼圆", Inter, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: 'Poppins', Arial, '幼圆', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-family: InterTight, Arial, '幼圆', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
 }
