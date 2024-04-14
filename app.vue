@@ -1,4 +1,5 @@
 <template>
+
   <Head>
     <Meta charset="UTF-8" />
     <Link rel="icon" href="favicon.ico" />
@@ -33,6 +34,34 @@ import HeaderActions from "./components/header-actions.vue";
 import Footer from "./components/footer.vue";
 import '~/assets/css/main.css'
 useBackgroundMask();
+
+if (import.meta.env.PROD) {
+  useHead({
+    script: [
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-8JMVF7XBX8',
+        async: true
+      },
+      {
+        innerHTML: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-8JMVF7XBX8');`
+      },
+      {
+        innerHTML: `
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?ce0bf486bcd5da14e4e5a6674b460cb0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+          })();`
+      }
+    ]
+  })
+}
 </script>
 
 <style scoped>
