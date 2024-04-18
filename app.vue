@@ -2,7 +2,9 @@
 
   <Head>
     <Meta charset="UTF-8" />
-    <Link rel="icon" type="image/svg+xml" href="favicon.ico" />
+    <Link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <Link rel="icon" type="image/png" sizes="16x16" href="favicon_16x16.png" />
+    <Link rel="icon" type="image/png" sizes="32x32" href="favicon_32x32.png" />
     <Meta name="description" content="Markdown Reader's website" />
     <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <Title>Markdown Reader</Title>
