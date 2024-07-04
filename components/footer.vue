@@ -12,7 +12,7 @@
           <NuxtLink class="link" to="/feedback">Feedback</NuxtLink>
         </li>
         <li>
-          <NuxtLink class="link" target="_blank" to="https://github.com/md-reader/markdown-reader">GitHub</NuxtLink>
+          <NuxtLink class="link" target="_blank" to="https://github.com/md-reader/md-reader">GitHub</NuxtLink>
         </li>
         <li>
           <NuxtLink class="link" to="mailto:mkdreader@gmail.com">Email</NuxtLink>
