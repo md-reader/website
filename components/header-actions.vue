@@ -3,7 +3,7 @@
     <UButton :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'" :color="null" variant="link"
       aria-label="Theme" @click="isDark = !isDark" />
     <UButton icon="i-mdi-github" :color="null" variant="link" aria-label="GitHub"
-      to="https://github.com/md-reader/markdown-reader" target="_blank" />
+      to="https://github.com/md-reader/md-reader" target="_blank" />
   </div>
 </template>
 
