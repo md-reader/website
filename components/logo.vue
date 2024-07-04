@@ -1,13 +1,15 @@
 <template>
-  <NuxtLink class="logo" to="/">
-    <img src="../assets/logo-stroke.svg" alt="logo">
-    <span class="hidden md:inline font-bold">Markdown Reader</span>
-  </NuxtLink>
+  <div>
+    <NuxtLink class="logo" to="/">
+      <img src="../assets/logo-stroke.svg" alt="logo">
+      <span class="hidden md:inline font-bold">Markdown Reader</span>
+    </NuxtLink>
+  </div>
 </template>
 
 <style scoped>
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-size: 18px;
   font-weight: bold;
