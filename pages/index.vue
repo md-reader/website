@@ -27,12 +27,18 @@
 </template>
 
 <script setup lang="ts">
+import banner1 from '../assets/banner-assets/banner-light-1.png'
+import banner2 from '../assets/banner-assets/banner-light-2.png'
+import banner3 from '../assets/banner-assets/banner-light-3.png'
+import banner4 from '../assets/banner-assets/banner-light-4.png'
+import banner5 from '../assets/banner-assets/banner-light-5.png'
+
 const items = [
-  `../assets/banner-assets/banner-light-1.png`,
-  `../assets/banner-assets/banner-light-2.png`,
-  `../assets/banner-assets/banner-light-3.png`,
-  `../assets/banner-assets/banner-light-4.png`,
-  `../assets/banner-assets/banner-light-5.png`,
+  banner1,
+  banner2,
+  banner3,
+  banner4,
+  banner5,
 ]
 </script>
 
