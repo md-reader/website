@@ -1,9 +1,9 @@
-@import "./base.css";
+@import './base.css';
 
 #__nuxt {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 2rem 3rem;
   font-weight: normal;
 }
 
@@ -42,7 +42,7 @@ ul {
 
 .background-mask::before,
 .background-mask::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;

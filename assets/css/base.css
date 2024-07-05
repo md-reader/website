@@ -108,6 +108,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-family: 'Poppins Bold';
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 38px !important;
