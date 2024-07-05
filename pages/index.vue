@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <h1>Make reading <b>Markdown</b> easier!</h1>
+    <h1>Make reading <span>Markdown</span> easier!</h1>
     <p>Extremely fast rendering, multi-plugin, dual-theme markdown reading extension.</p>
     <!-- <p>Support: Chrome/Firefox/Edge/Safari</p> -->
     <div class="downloads mt-16 flex items-center justify-center">
@@ -49,13 +49,13 @@ const items = [
 
 h1 {
   line-height: 1.2;
-  font-weight: bold;
+  font-family: 'Poppins Bold';
   font-size: 48px;
   margin-bottom: 10px;
 }
 
-b {
-  color: var(--color-primary)
+h1 span {
+  color: var(--color-primary);
 }
 
 p {

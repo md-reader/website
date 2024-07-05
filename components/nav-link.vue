@@ -10,7 +10,7 @@ a {
   display: inline-block;
   line-height: 32px;
   padding: 0 0.8rem;
-  font-weight: bold;
+  font-family: 'Poppins Bold';
   color: var(--color-primary);
   transition: transform 0.3s;
   cursor: pointer;
