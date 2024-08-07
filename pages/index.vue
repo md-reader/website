@@ -23,10 +23,12 @@
         <img :src="item" class="w-full" draggable="false">
       </UCarousel>
     </div>
+    <reviews></reviews>
   </div>
 </template>
 
 <script setup lang="ts">
+import reviews from '@/components/reviews.vue'
 import banner1 from '../assets/banner-assets/banner-light-1.png'
 import banner2 from '../assets/banner-assets/banner-light-2.png'
 import banner3 from '../assets/banner-assets/banner-light-3.png'

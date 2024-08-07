@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="mt-20">
     <span class="cpr">
       Copyright © 2018-2024 <NuxtLink target="_blank" to="https://github.com/Heroor">Bener</NuxtLink>.
     </span>
