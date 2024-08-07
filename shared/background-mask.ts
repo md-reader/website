@@ -16,7 +16,7 @@ class BackgroundMask {
   step2: number = -0.6
   size: number = 140
   halfSize: number = this.size / 2
-  itemCount: number = 10
+  itemCount: number = 14
   ls: any[] = []
   mask: HTMLElement | undefined
 
