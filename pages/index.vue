@@ -1,84 +1,52 @@
 <template>
-  <div class="content">
-    <h1>Make reading <span>Markdown</span> easier!</h1>
-    <p>Extremely fast rendering, multi-plugin, dual-theme markdown reading extension.</p>
+  <div class="px-[50px]">
+    <h1 class=" text-5xl md:text-6xl !leading-[1.1] md:w-[700px] w-auto">
+      Effortless <span class="text-primary">Markdown</span>
+      Reading for Everyone!
+    </h1>
+    <p class="text-xl mt-6">Turn Markdown into beautifully rendered pages with this powerful browser extension.</p>
     <!-- <p>Support: Chrome/Firefox/Edge/Safari</p> -->
-    <div class="downloads mt-16 flex items-center justify-center">
-      <span class="text-3xl mr-8 -ml-40 items-center hidden md:flex">
-        Install<UIcon class="ml-1 animation-bounce" name="i-heroicons-arrow-right-20-solid"></UIcon>
+
+    <div class="mt-10 flex items-center">
+      <span class="text-3xl mr-7 flex items-center poppins-semi-bold">
+        Install<UIcon class="ml-1.5 animation-bounce" name="i-heroicons-arrow-right-20-solid"></UIcon>
       </span>
-      <NuxtLink to="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg" class="text-center mr-7"
+      <NuxtLink to="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg" class="text-center mr-8"
         target="_blank">
-        <img class="download-logo mb-1" src="@/assets/chrome-web-store.svg" alt="chrome-web-store">
+        <img class="inline-block h-[45px] mb-1.5" src="@/assets/chrome-web-store.svg" alt="chrome-web-store">
         <div>Chrome</div>
       </NuxtLink>
       <NuxtLink to="https://addons.mozilla.org/firefox/addon/markdown-reader-ext/" class="text-center" target="_blank">
-        <img class="download-logo mb-1 fx" src="@/assets/fx-addon.svg" alt="fx-addon">
+        <img class="inline-block h-[45px] mb-1.5" src="@/assets/fx-addon.svg" alt="fx-addon">
         <div>Firefox</div>
       </NuxtLink>
     </div>
-    <div class="banner mt-2">
-      <UCarousel v-slot="{ item }" :items="items" :ui="{ item: 'basis-full' }" class="rounded-lg overflow-hidden"
-        arrows>
-        <img :src="item" class="w-full" draggable="false">
-      </UCarousel>
-    </div>
-    <reviews></reviews>
   </div>
+
+  <div class="mt-14">
+    <img v-show="!isDark" class="block dark:opacity-95 drop-shadow-lg" draggable="false" src="/images/banner-day.png" />
+    <img v-show="isDark" class="block dark:opacity-95 drop-shadow-lg" draggable="false"
+      src="/images/banner-night.png" />
+  </div>
+  <Features></Features>
+  <reviews></reviews>
+  <faq></faq>
 </template>
 
 <script setup lang="ts">
-import reviews from '@/components/reviews.vue'
-import banner1 from '../assets/banner-assets/banner-light-1.png'
-import banner2 from '../assets/banner-assets/banner-light-2.png'
-import banner3 from '../assets/banner-assets/banner-light-3.png'
-import banner4 from '../assets/banner-assets/banner-light-4.png'
-import banner5 from '../assets/banner-assets/banner-light-5.png'
+const colorMode = useColorMode()
+const isDark = computed({
+  get() {
+    return colorMode.value === 'dark'
+  },
+  set() {
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+  }
+})
 
-const items = [
-  banner1,
-  banner2,
-  banner3,
-  banner4,
-  banner5,
-]
 </script>
 
 <style scoped>
-.content {
-  text-align: center;
-}
-
-h1 {
-  line-height: 1.2;
-  font-family: 'Poppins Bold';
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-h1 span {
-  color: var(--color-primary);
-}
-
-p {
-  font-size: 17px;
-  color: var(--color-desc);
-}
-
-.download-logo {
-  height: 45px;
-  display: inline-block;
-}
-
-.fx {
-  height: 48px;
-  margin-top: -3px;
-}
-
-.banner img {
-  max-width: 100%;
-}
-
 .animation-bounce {
   animation: bounce 1s infinite;
 }

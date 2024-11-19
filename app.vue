@@ -1,41 +1,30 @@
-<template>
-
-  <Head>
-    <Meta charset="UTF-8" />
-    <Link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <Link rel="icon" type="image/png" sizes="16x16" href="favicon_16x16.png" />
-    <Link rel="icon" type="image/png" sizes="32x32" href="favicon_32x32.png" />
-    <Meta name="description" content="Markdown Reader's website" />
-    <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <Title>Markdown Reader</Title>
-  </Head>
-
-  <header>
-    <MDLogo></MDLogo>
-    <nav class="min-w-fit">
-      <NuxtLink custom to="/" v-slot="{ navigate, isExactActive }">
-        <NavLink :class="{ isExactActive }" @click="navigate">Home</NavLink>
-      </NuxtLink>
-      <NuxtLink custom to="/about" v-slot="{ navigate, isExactActive }">
-        <NavLink :class="{ isExactActive }" @click="navigate">About</NavLink>
-      </NuxtLink>
-    </nav>
-    <HeaderActions></HeaderActions>
-  </header>
-
-  <NuxtPage></NuxtPage>
-
-  <Footer />
-</template>
-
 <script setup lang="ts">
-import { useBackgroundMask } from "./shared";
 import MDLogo from './components/logo.vue'
 import NavLink from "./components/nav-link.vue";
 import HeaderActions from "./components/header-actions.vue";
 import Footer from "./components/footer.vue";
+import Background from "./components/background.client.vue";
 import '~/assets/css/main.css'
-useBackgroundMask();
+
+const isClient = ref(false)
+const headerRef = ref<HTMLElement | null>(null)
+function headerStick() {
+  if (window.scrollY > 50) {
+    if (!headerRef.value!.classList.contains('sticked')) {
+      headerRef.value!.classList.add('sticked');
+    }
+  } else {
+    if (headerRef.value!.classList.contains('sticked')) {
+      headerRef.value!.classList.remove('sticked');
+    }
+  }
+}
+
+onMounted(() => {
+  headerStick()
+  window.addEventListener('scroll', headerStick);
+  isClient.value = true
+})
 
 if (import.meta.env.PROD) {
   useHead({
@@ -66,22 +55,43 @@ if (import.meta.env.PROD) {
 }
 </script>
 
+<template>
+
+  <Head>
+    <Meta charset="UTF-8" />
+    <Link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <Link rel="icon" type="image/png" sizes="16x16" href="favicon_16x16.png" />
+    <Link rel="icon" type="image/png" sizes="32x32" href="favicon_32x32.png" />
+    <Meta name="description" content="Markdown Reader's website" />
+    <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <Title>Markdown Reader</Title>
+  </Head>
+
+  <header ref="headerRef" class="sticky top-0 py-[1rem] px-[2rem] z-10">
+    <div class="main-container flex justify-between">
+      <MDLogo class="flex-1"></MDLogo>
+      <!-- <nav class="min-w-fit flex-1 text-[15px] text-center select-none text-[--color-heading]">
+        <NuxtLink custom to="/" v-slot="{ navigate, isExactActive }">
+          <NavLink :class="{ isExactActive }" @click="navigate">Home</NavLink>
+        </NuxtLink>
+        <NuxtLink custom to="/about" v-slot="{ navigate, isExactActive }">
+          <NavLink :class="{ isExactActive }" @click="navigate">About</NavLink>
+        </NuxtLink>
+      </nav> -->
+      <HeaderActions class="flex-1"></HeaderActions>
+    </div>
+  </header>
+  <div class="main-container !mt-28 px-[2rem]">
+    <NuxtPage></NuxtPage>
+  </div>
+
+  <Footer />
+  <Background v-if="isClient" :options="{ bg1: '/logo-bg-1.svg', bg2: '/logo-bg-2.svg' }" />
+</template>
+
 <style scoped>
-header {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-  margin-bottom: 90px;
-}
-
-header nav {
-  font-size: 15px;
-  text-align: center;
-  user-select: none;
-  color: var(--color-heading);
-}
-
-header>* {
-  flex: 1;
+header.sticked {
+  @apply bg-white/80 dark:bg-black/80 duration-300;
+  backdrop-filter: blur(8px);
 }
 </style>

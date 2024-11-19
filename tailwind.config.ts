@@ -5,7 +5,7 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        'hero': {
+        hero: {
           '50': '#f2f5fc',
           '100': '#e2e8f7',
           '200': '#cbd7f2',
@@ -18,7 +18,7 @@ export default <Partial<Config>>{
           '900': '#333b75',
           '950': '#232648',
         },
-      }
-    }
-  }
+      },
+    },
+  },
 }

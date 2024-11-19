@@ -10,14 +10,19 @@
     "content": "用过最好的 Markdown 插件, 没有之一"
   },
   {
-    "name": "Thomas Delplace",
-    "rating": 5,
-    "content": "I'm a developer and I'm working on a really complex JS library right now so I had to write a documentation, even for myself to be able to find any information about anything on my code really quickly and easily. I preferred to do it oin markdown since it's adapted to github's platform. I tried several and no other chrome extension for markdown readding is nearly as good as this. This is just perfect! Thank you people for bringing that to life!"
-  },
-  {
     "name": "karam nassar",
     "rating": 5,
     "content": "What a great extension! Thank you."
+  },
+  {
+    "name": "杨棣",
+    "rating": 5,
+    "content": "非常好用"
+  },
+  {
+    "name": "Strigkos Nomikos",
+    "rating": 5,
+    "content": "Very Good result"
   },
   {
     "name": "Rachel Gardner",
@@ -50,23 +55,18 @@
     "content": "太棒了！简直就是办公神器！"
   },
   {
-    "name": "杨棣",
-    "rating": 5,
-    "content": "非常好用"
-  },
-  {
-    "name": "Paolo Mereu",
-    "rating": 5,
-    "content": "Di immediato funzionamento, il rendering è ottimale."
-  },
-  {
     "name": "Sam Wong",
     "rating": 5,
     "content": "非常棒，比 Markdown Preview Plus 好用"
   },
   {
-    "name": "Strigkos Nomikos",
+    "name": "Thomas Delplace",
     "rating": 5,
-    "content": "Very Good result"
+    "content": "I'm a developer and I'm working on a really complex JS library right now so I had to write a documentation, even for myself to be able to find any information about anything on my code really quickly and easily. I preferred to do it oin markdown since it's adapted to github's platform. I tried several and no other chrome extension for markdown readding is nearly as good as this. This is just perfect! Thank you people for bringing that to life!"
+  },
+  {
+    "name": "Paolo Mereu",
+    "rating": 5,
+    "content": "Di immediato funzionamento, il rendering è ottimale."
   }
 ]

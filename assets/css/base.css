@@ -19,7 +19,7 @@
   --v-divider-dark-2: rgba(84, 84, 84, 0.48);
 
   --v-text-light-1: var(--v-indigo);
-  --v-text-light-2: rgba(60, 60, 60, 0.66);
+  --v-text-light-2: rgba(60, 60, 60, 0.75);
   --v-text-dark-1: var(--v-white);
   --v-text-dark-2: rgba(235, 235, 235, 0.64);
 }
@@ -92,6 +92,11 @@
   src: url('../fonts/Poppins-Bold.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Poppins SemiBold';
+  src: url('../fonts/Poppins-SemiBold.woff') format('woff');
+}
+
 body {
   position: relative;
   min-height: 100vh;
@@ -108,12 +113,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
+h1,
+h2,
+.poppins-bold {
   font-family: 'Poppins Bold';
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 38px !important;
-  }
+.poppins-semi-bold {
+  font-family: 'Poppins SemiBold';
+}
+
+code.code-style {
+  @apply px-1.5 py-1 bg-gray-200 dark:bg-gray-700 text-sm rounded font-mono;
 }

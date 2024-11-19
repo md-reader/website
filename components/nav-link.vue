@@ -9,8 +9,9 @@ a {
   position: relative;
   display: inline-block;
   line-height: 32px;
+  border-radius: 10px;
   padding: 0 0.8rem;
-  font-family: 'Poppins Bold';
+  font-family: 'Poppins SemiBold';
   color: var(--color-primary);
   transition: transform 0.3s;
   cursor: pointer;
@@ -41,10 +42,6 @@ a:hover::before {
   background: currentColor;
 }
 
-a:active {
-  transform: scale(0.95);
-}
-
 a:active::before {
   opacity: 0.3;
   transform: scaleY(0.14) scaleX(0.45);
@@ -60,6 +57,6 @@ a.isExactActive::before {
   transform: scale(1);
   transition: opacity 0.3s, bottom 0.15s ease-in-out, transform 0.3s 0.05s,
     background 0.05s;
-  background: rgba(107, 139, 235, 0.85);
+  background: rgba(107, 139, 235, 0.6);
 }
 </style>

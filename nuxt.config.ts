@@ -7,6 +7,6 @@ export default defineNuxtConfig({
     buildAssetsDir: 'nuxt',
   },
   ui: {
-    icons: ['mdi']
+    icons: ['mdi', 'fluent', 'solar'],
   },
 })
