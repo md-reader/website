@@ -12,7 +12,7 @@ const cards = [{
 }]
 
 const feats = [{
-  title: 'Local and Online Markdown',
+  title: 'Local & Online Markdown',
   desc: 'Access and preview Markdown files from anywhere! Whether it’s a local file saved on your computer or an online document linked via URL, Markdown Reader seamlessly renders them all. Simplify your workflow with dual-source support.',
   src: '/images/local-and-online.svg',
   icon: 'i-mdi-file',
@@ -40,7 +40,7 @@ const feats = [{
 </script>
 
 <template>
-  <h2 class="mt-64">Powerful, Beautiful, and Fast!</h2>
+  <h2>Powerful, Beautiful, and Fast!</h2>
   <p class="desc">With out-of-the-box Plugins and Extremely Fast rendering.</p>
 
   <div class="xl:columns-3 gap-10 mt-24 mb-44">

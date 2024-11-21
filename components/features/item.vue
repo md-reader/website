@@ -24,15 +24,20 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex text-left xl:mt-28 mt-32 justify-around flex-col xl:flex-row items-center">
-    <div class="xl:flex-1 py-8 xl:max-w-[560px] max-w-[620px] xl:w-auto order-[1] xl:order-none">
-      <div class="flex items-center gap-2 xl:text-4xl text-2xl poppins-semi-bold !leading-loose">
+  <div class="flex text-left xl:mt-40 mt-32 justify-around flex-col xl:flex-row items-center">
+    <div class="xl:flex-1 pt-6 xl:py-8 xl:max-w-[560px] max-w-[520px] xl:w-auto order-[1] xl:order-none">
+      <div
+        class="hidden xl:flex items-center gap-2 xl:text-4xl text-2xl poppins-semi-bold leading-[2.5] xl:leading-loose">
         <UIcon v-if="icon" :name="icon" class="align-text-top"></UIcon>
         {{ title }}
       </div>
       <div class="text-lg xl:text-xl text-gray-600 dark:text-gray-300">{{ desc }}</div>
     </div>
-    <div class="xl:max-w-[480px] max-w-[640px]" :class="{ 'order-[-1]': reverse }">
+    <div class="xl:max-w-[480px] max-w-[540px]" :class="{ 'order-[-1]': reverse }">
+      <div class="xl:hidden flex items-center gap-2 sm:text-3xl text-3xl poppins-semi-bold !leading-[2.6]">
+        <UIcon v-if="icon" :name="icon" class="align-text-top"></UIcon>
+        {{ title }}
+      </div>
       <img draggable="false" :src="src" class="block drop-shadow-md" />
     </div>
   </div>

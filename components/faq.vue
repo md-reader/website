@@ -101,11 +101,11 @@ const faqs = [
 </script>
 
 <template>
-  <h2 class="mt-64">Frequently Asked Questions</h2>
-  <div class="mt-20">
+  <h2>Frequently Asked Questions</h2>
+  <div class="mt-24">
     <ul v-for="item in faqs" :key="item.title" class="max-w-[1000px] m-auto">
       <li
-        class="flex justify-between xl:text-2xl text-xl py-5 hover:text-zinc-500 dark:hover:text-zinc-300 cursor-pointer duration-500 transition-[color]"
+        class="flex justify-between xl:text-2xl text-xl py-5 hover:text-zinc-500 dark:hover:text-zinc-300 cursor-pointer transition-[color]"
         @click="expandMap[item.title] = !expandMap[item.title]">
         <h3 class="flex items-center gap-2 poppins-semi-bold">
           <UIcon name="i-mdi-help-circle opacity-80"></UIcon>

@@ -8,7 +8,7 @@ function getAvatar(item) {
 </script>
 
 <template>
-  <h2 class="mt-56">It's been getting rave reviews!</h2>
+  <h2>It's been getting rave reviews!</h2>
   <p class="desc">
     Markdown Reader has over
     <span class="text-2xl poppins-semi-bold px-1.5 text-primary">20,000+</span>

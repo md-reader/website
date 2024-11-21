@@ -120,7 +120,7 @@ h2,
 }
 
 h2 {
-  @apply text-4xl xl:text-5xl !leading-tight text-center;
+  @apply text-4xl xl:text-5xl !leading-tight text-center mt-52 xl:mt-64;
 }
 
 h2 + p.desc {
