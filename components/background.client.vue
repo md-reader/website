@@ -27,7 +27,7 @@ const config = {
   spacing: 170,
   rowHeight: 140,
   imgSize: 170,
-  speedLeft: 0.5,
+  speedLeft: 0.4,
   speedRight: 1,
   padding: 170,
   oddOffset: 0,
@@ -177,5 +177,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <canvas ref="canvasRef" class="block fixed top-0 left-0 z-[-1] blur opacity-[0.08]"></canvas>
+  <canvas ref="canvasRef" class="block fixed top-0 left-0 z-[-1] blur opacity-[0.12]"></canvas>
 </template>

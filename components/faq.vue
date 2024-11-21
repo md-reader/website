@@ -101,25 +101,27 @@ const faqs = [
 </script>
 
 <template>
-  <h2 class="text-5xl mt-64 text-center mb-24">Frequently Asked Questions</h2>
-  <ul v-for="item in faqs" :key="item.title" class="max-w-[1000px] m-auto">
-    <li
-      class="flex justify-between text-2xl py-5 hover:text-zinc-500 dark:hover:text-zinc-300 cursor-pointer duration-100"
-      @click="expandMap[item.title] = !expandMap[item.title]">
-      <h3 class="flex items-center gap-2 poppins-semi-bold">
-        <UIcon name="i-mdi-help-circle opacity-80"></UIcon>
-        {{ item.title }}
-      </h3>
-      <UIcon name="i-heroicons-chevron-right-20-solid duration-100" class="transform"
-        :class="{ 'rotate-90': expandMap[item.title] }">
-      </UIcon>
-    </li>
-    <ul v-show="expandMap[item.title]" class="text-lg px-9 pt-4 pb-6 text-gray-600 dark:text-gray-300">
-      <li v-for="(ques, i) in item.questions" class="mt-8 first:mt-0">
-        <h4 class="mb-2 poppins-semi-bold">{{ i + 1 }}. {{ ques[0] }}</h4>
-        <div v-if="typeof ques[1] === 'string'">{{ ques[1] }}</div>
-        <component v-else :is="ques[1]"></component>
+  <h2 class="mt-64">Frequently Asked Questions</h2>
+  <div class="mt-20">
+    <ul v-for="item in faqs" :key="item.title" class="max-w-[1000px] m-auto">
+      <li
+        class="flex justify-between xl:text-2xl text-xl py-5 hover:text-zinc-500 dark:hover:text-zinc-300 cursor-pointer duration-500 transition-[color]"
+        @click="expandMap[item.title] = !expandMap[item.title]">
+        <h3 class="flex items-center gap-2 poppins-semi-bold">
+          <UIcon name="i-mdi-help-circle opacity-80"></UIcon>
+          {{ item.title }}
+        </h3>
+        <UIcon name="i-heroicons-chevron-right-20-solid" class="duration-100 !text-2xl"
+          :class="{ 'rotate-90': expandMap[item.title] }">
+        </UIcon>
       </li>
+      <ul v-show="expandMap[item.title]" class="text-base xl:text-lg px-9 pt-4 pb-6 text-gray-600 dark:text-gray-300">
+        <li v-for="(ques, i) in item.questions" class="mt-8 first:mt-0">
+          <h4 class="mb-2 poppins-semi-bold">{{ i + 1 }}. {{ ques[0] }}</h4>
+          <div v-if="typeof ques[1] === 'string'">{{ ques[1] }}</div>
+          <component v-else :is="ques[1]"></component>
+        </li>
+      </ul>
     </ul>
-  </ul>
+  </div>
 </template>

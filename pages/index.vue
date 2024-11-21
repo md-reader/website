@@ -1,14 +1,15 @@
 <template>
   <div class="px-[50px]">
-    <h1 class=" text-5xl md:text-6xl !leading-[1.1] md:w-[700px] w-auto">
+    <h1 class="text-5xl xl:text-6xl !leading-[1.1] md:w-[700px] w-auto">
       Effortless <span class="text-primary">Markdown</span>
       Reading for Everyone!
     </h1>
-    <p class="text-xl mt-6">Turn Markdown into beautifully rendered pages with this powerful browser extension.</p>
+    <p class="text-lg xl:text-xl mt-6">Turn Markdown into beautifully rendered pages with this powerful browser
+      extension.</p>
     <!-- <p>Support: Chrome/Firefox/Edge/Safari</p> -->
 
     <div class="mt-10 flex items-center">
-      <span class="text-3xl mr-7 flex items-center poppins-semi-bold">
+      <span class="text-2xl xl:text-3xl mr-7 flex items-center poppins-semi-bold">
         Install<UIcon class="ml-1.5 animation-bounce" name="i-heroicons-arrow-right-20-solid"></UIcon>
       </span>
       <NuxtLink to="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg" class="text-center mr-8"

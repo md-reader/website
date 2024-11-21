@@ -40,14 +40,14 @@ const feats = [{
 </script>
 
 <template>
-  <h2 class="text-5xl mt-64 text-center">Powerful, Beautiful, and Fast!</h2>
-  <p class="text-xl mt-5 text-center">With out-of-the-box Plugins and Extremely Fast rendering.</p>
+  <h2 class="mt-64">Powerful, Beautiful, and Fast!</h2>
+  <p class="desc">With out-of-the-box Plugins and Extremely Fast rendering.</p>
 
   <div class="xl:columns-3 gap-10 mt-24 mb-44">
     <UCard v-for="c in cards"
       class="break-inside-avoid xl:p-3 xl:m-0 max-w-[980px] m-auto mb-6 p-2 rounded-xl dark:bg-zinc-900">
-      <div class="text-[22px] poppins-semi-bold leading-none mb-5">{{ c.title }}</div>
-      <div class="text-lg text-gray-600 dark:text-gray-300">{{ c.desc }}</div>
+      <div class="text-xl xl:text-[22px] poppins-semi-bold leading-none mb-4 xl:mb-5">{{ c.title }}</div>
+      <div class="text-base xl:text-lg text-gray-600 dark:text-gray-300">{{ c.desc }}</div>
     </UCard>
   </div>
   <Item v-for="(f, i) in feats" :title="f.title" :desc="f.desc" :src="f.src" :icon="f.icon" :reverse="!!(i % 2)">

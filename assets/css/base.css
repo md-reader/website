@@ -119,6 +119,14 @@ h2,
   font-family: 'Poppins Bold';
 }
 
+h2 {
+  @apply text-4xl xl:text-5xl !leading-tight text-center;
+}
+
+h2 + p.desc {
+  @apply text-lg xl:text-xl mt-5 text-center;
+}
+
 .poppins-semi-bold {
   font-family: 'Poppins SemiBold';
 }
