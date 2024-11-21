@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import reviews from '~/shared/reviews.json'
+
+function getAvatar(item) {
+  const name = item.isFx ? 'fx' : item.name.replace(' ', '_')
+  return `/avatars/${name}.png`
+}
 </script>
 
 <template>
@@ -15,7 +20,7 @@ import reviews from '~/shared/reviews.json'
       class="break-inside-avoid shadow ring-1 ring-gray-200 dark:ring-zinc-800 bg-white dark:bg-zinc-900 rounded-2xl py-6 px-7 duration-100">
       "{{ item.content }}"
       <div class="flex gap-4 items-center mt-4">
-        <UAvatar :src="`/avatars/${item.name}.png`" alt="Avatar" size="md" />
+        <UAvatar :src="getAvatar(item)" alt="Avatar" size="md" />
         <div class="poppins-semi-bold">
           {{ item.name }}
           <div class="leading-none">
