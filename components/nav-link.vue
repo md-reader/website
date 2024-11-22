@@ -6,10 +6,6 @@
 </template>
 
 <style scoped>
-a:not(:first-of-type) {
-  margin-left: 0.6rem;
-}
-
 a.isExactActive {
   color: var(--color-primary);
 }

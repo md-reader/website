@@ -104,6 +104,6 @@ header.sticked {
 }
 
 .logo:deep(span) {
-  @apply md:inline hidden;
+  @apply lg:inline hidden;
 }
 </style>
