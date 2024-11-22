@@ -80,7 +80,7 @@ if (import.meta.env.PROD) {
         </NuxtLink>
         <NuxtLink custom v-slot="{ isExactActive }">
           <NavLink :class="{ isExactActive }" target="__blank_Support"
-            href="https://github.com/orgs/md-reader/discussions/51">
+            href="https://github.com/orgs/md-reader/discussions/64">
             Support
           </NavLink>
         </NuxtLink>
