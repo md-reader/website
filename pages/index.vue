@@ -1,25 +1,24 @@
 <template>
   <div class="px-[50px]">
     <h1 class="text-5xl xl:text-6xl !leading-[1.1] md:w-[700px] w-auto">
-      Effortless <span class="text-primary">Markdown</span>
+      Effortless <span class="logo-text">Markdown</span>
       Reading for Everyone!
     </h1>
     <p class="text-lg xl:text-xl mt-6">Turn Markdown into beautifully rendered pages with this powerful browser
       extension.</p>
-    <!-- <p>Support: Chrome/Firefox/Edge/Safari</p> -->
 
     <div class="mt-10 flex items-center">
       <span class="text-2xl xl:text-3xl mr-7 flex items-center poppins-semi-bold">
-        Install<UIcon class="ml-1.5 animation-bounce" name="i-heroicons-arrow-right-20-solid"></UIcon>
+        Install<UIcon class="ml-1.5 animation-bounce-right" name="i-heroicons-arrow-right-20-solid"></UIcon>
       </span>
       <NuxtLink to="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg" class="text-center mr-8"
         target="_blank">
-        <img class="inline-block h-[45px] mb-1.5" src="@/assets/chrome-web-store.svg" alt="chrome-web-store">
-        <div>Chrome</div>
+        <img class="inline-block h-[45px] mb-2.5" src="@/assets/chrome-web-store.svg" alt="chrome-web-store">
+        <div class="leading-none">Chrome</div>
       </NuxtLink>
       <NuxtLink to="https://addons.mozilla.org/firefox/addon/markdown-reader-ext/" class="text-center" target="_blank">
-        <img class="inline-block h-[45px] mb-1.5" src="@/assets/fx-addon.svg" alt="fx-addon">
-        <div>Firefox</div>
+        <img class="inline-block h-[45px] mb-2.5" src="@/assets/firefox.png" alt="fx-addon">
+        <div class="leading-none">Firefox</div>
       </NuxtLink>
     </div>
   </div>
@@ -30,8 +29,7 @@
       src="/images/banner-night.png" />
   </div>
   <Features></Features>
-  <reviews></reviews>
-  <faq></faq>
+  <Reviews></Reviews>
 </template>
 
 <script setup lang="ts">
@@ -48,11 +46,17 @@ const isDark = computed({
 </script>
 
 <style scoped>
-.animation-bounce {
-  animation: bounce 1s infinite;
+.animation-bounce-right {
+  animation: bounce-right 1s infinite;
 }
 
-@keyframes bounce {
+.logo-text {
+  @apply text-primary bg-clip-text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(330deg, #7294ff, #a474f7);
+}
+
+@keyframes bounce-right {
 
   0%,
   100% {

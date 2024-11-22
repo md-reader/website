@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import reviews from '~/shared/reviews.json'
 
-function getAvatar(item) {
+function getAvatar(item: any) {
   const name = item.isFx ? 'fx' : item.name.replace(' ', '_')
   return `/avatars/${name}.png`
 }

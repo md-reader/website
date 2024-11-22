@@ -120,10 +120,10 @@ h2,
 }
 
 h2 {
-  @apply text-4xl xl:text-5xl !leading-tight text-center mt-52 xl:mt-64;
+  @apply text-4xl xl:text-5xl !leading-tight text-center mt-52 xl:mt-60;
 }
 
-h2 + p.desc {
+p.desc {
   @apply text-lg xl:text-xl mt-5 text-center;
 }
 

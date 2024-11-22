@@ -1,10 +1,6 @@
-<script lang="ts" setup>
-import MDLogo from '~/components/logo.vue'
-</script>
-
 <template>
   <footer class="mt-44 text-center">
-    <MDLogo class="flex-1"></MDLogo>
+    <Logo class="flex-1"></Logo>
     <div class="mt-5 md:text-sm text-xs text-zinc-400 dark:text-zinc-500">
       <span class="mr-1">
         © 2024 Copyright <NuxtLink target="_blank" to="https://github.com/Heroor">Bener</NuxtLink>.
