@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import MDLogo from './components/logo.vue'
-import NavLink from "./components/nav-link.vue";
-import HeaderActions from "./components/header-actions.vue";
-import Footer from "./components/footer.vue";
 import Background from "./components/background.client.vue";
 import '~/assets/css/main.css'
 
@@ -69,20 +65,21 @@ if (import.meta.env.PROD) {
 
   <header ref="headerRef" class="sticky top-0 py-[1rem] px-[2rem] z-10">
     <div class="main-container flex justify-between">
-      <MDLogo class="flex-1"></MDLogo>
-      <!-- <nav class="min-w-fit flex-1 text-[15px] text-center select-none text-[--color-heading]">
+      <Logo class="flex-1 logo"></Logo>
+      <nav class="min-w-fit flex-1 text-[15px] text-center select-none text-[--color-heading]">
         <NuxtLink custom to="/" v-slot="{ navigate, isExactActive }">
           <NavLink :class="{ isExactActive }" @click="navigate">Home</NavLink>
         </NuxtLink>
-        <NuxtLink custom to="/about" v-slot="{ navigate, isExactActive }">
-          <NavLink :class="{ isExactActive }" @click="navigate">About</NavLink>
+        <NuxtLink custom to="/install" v-slot="{ navigate, isExactActive }">
+          <NavLink :class="{ isExactActive }" @click="navigate">Install</NavLink>
         </NuxtLink>
-      </nav> -->
+      </nav>
       <HeaderActions class="flex-1"></HeaderActions>
     </div>
   </header>
   <div class="main-container !mt-28 px-[2rem]">
     <NuxtPage></NuxtPage>
+    <Faq></Faq>
   </div>
 
   <Footer />
@@ -93,5 +90,9 @@ if (import.meta.env.PROD) {
 header.sticked {
   @apply bg-white/80 dark:bg-black/80 duration-300;
   backdrop-filter: blur(8px);
+}
+
+.logo:deep(span) {
+  @apply md:inline hidden;
 }
 </style>

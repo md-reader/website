@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import LocalMarkdownFAQ from './LocalMarkdownFAQ.vue'
-const expandMap: Record<string, boolean> = reactive({})
+const expandMap: Record<string, boolean> = reactive({
+  'About Markdown Reader': true
+})
 
 const faqs = [
   {
@@ -105,23 +107,24 @@ const faqs = [
   <div class="mt-24">
     <ul v-for="item in faqs" :key="item.title" class="max-w-[1000px] m-auto">
       <li
-        class="flex justify-between xl:text-2xl text-xl py-5 hover:text-zinc-500 dark:hover:text-zinc-300 cursor-pointer transition-[color]"
+        class="xl:text-2xl text-xl xl:py-5 py-4 hover:text-zinc-500 dark:hover:text-zinc-300 cursor-pointer transition-[color]"
         @click="expandMap[item.title] = !expandMap[item.title]">
-        <h3 class="flex items-center gap-2 poppins-semi-bold">
-          <UIcon name="i-mdi-help-circle opacity-80"></UIcon>
-          {{ item.title }}
+        <h3 class="flex items-center gap-2">
+          <UIcon name="i-mdi-help-circle" class="opacity-90"></UIcon>
+          <span class="poppins-semi-bold flex-1">{{ item.title }}</span>
+          <UIcon name="i-heroicons-chevron-right-20-solid" class="duration-100 !text-2xl"
+            :class="{ 'rotate-90': expandMap[item.title] }">
+          </UIcon>
         </h3>
-        <UIcon name="i-heroicons-chevron-right-20-solid" class="duration-100 !text-2xl"
-          :class="{ 'rotate-90': expandMap[item.title] }">
-        </UIcon>
+        <ul v-show="expandMap[item.title]"
+          class="text-base xl:text-lg px-9 pt-9 text-gray-600 dark:text-gray-300 cursor-auto" @click.stop>
+          <li v-for="(ques, i) in item.questions" class="mt-8 first:mt-0">
+            <h4 class="mb-2 poppins-semi-bold">{{ i + 1 }}. {{ ques[0] }}</h4>
+            <div v-if="typeof ques[1] === 'string'">{{ ques[1] }}</div>
+            <component v-else :is="ques[1]"></component>
+          </li>
+        </ul>
       </li>
-      <ul v-show="expandMap[item.title]" class="text-base xl:text-lg px-9 pt-4 pb-6 text-gray-600 dark:text-gray-300">
-        <li v-for="(ques, i) in item.questions" class="mt-8 first:mt-0">
-          <h4 class="mb-2 poppins-semi-bold">{{ i + 1 }}. {{ ques[0] }}</h4>
-          <div v-if="typeof ques[1] === 'string'">{{ ques[1] }}</div>
-          <component v-else :is="ques[1]"></component>
-        </li>
-      </ul>
     </ul>
   </div>
 </template>

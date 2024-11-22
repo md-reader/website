@@ -1,62 +1,44 @@
 <template>
-  <a v-bind="$attrs">
+  <a v-bind="$attrs"
+    class="poppins-semi-bold relative inline-block leading-8 px-3 rounded-lg cursor-pointer duration-200">
     <slot></slot>
   </a>
 </template>
 
 <style scoped>
-a {
-  position: relative;
-  display: inline-block;
-  line-height: 32px;
-  border-radius: 10px;
-  padding: 0 0.8rem;
-  font-family: 'Poppins SemiBold';
-  color: var(--color-primary);
-  transition: transform 0.3s;
-  cursor: pointer;
-}
-
-a::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: -45%;
-  position: absolute;
-  border-radius: 10px;
-  opacity: 0.25;
-  transform: scaleY(0.14) scaleX(0);
-  transition: opacity 0.3s, bottom 0.2s ease-in-out, transform 0.2s,
-    background 0.05s;
-  background: transparent;
-}
-
 a:not(:first-of-type) {
   margin-left: 0.6rem;
 }
 
-a:hover::before {
-  opacity: 0.3;
-  transform: scaleY(0.14) scaleX(0.3);
-  background: currentColor;
-}
-
-a:active::before {
-  opacity: 0.3;
-  transform: scaleY(0.14) scaleX(0.45);
-  background: currentColor;
-}
-
 a.isExactActive {
-  backdrop-filter: blur(4px);
+  color: var(--color-primary);
 }
 
 a.isExactActive::before {
+  opacity: 1;
+}
+
+a::before {
+  content: "";
+  width: 25%;
+  height: 4px;
+  position: absolute;
+  left: 50%;
   bottom: 0;
-  transform: scale(1);
-  transition: opacity 0.3s, bottom 0.15s ease-in-out, transform 0.3s 0.05s,
-    background 0.05s;
-  background: rgba(107, 139, 235, 0.6);
+  transform: translateX(-50%);
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.2s;
+  background: var(--color-primary);
+}
+
+a:hover::before {
+  opacity: 1;
+  width: 40%;
+}
+
+a:active::before {
+  opacity: 1;
+  width: 35%;
 }
 </style>
