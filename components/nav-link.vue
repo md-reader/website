@@ -20,7 +20,7 @@ a.isExactActive::before {
 
 a::before {
   content: "";
-  width: 25%;
+  width: 20px;
   height: 4px;
   position: absolute;
   left: 50%;
@@ -34,11 +34,11 @@ a::before {
 
 a:hover::before {
   opacity: 1;
-  width: 40%;
+  width: 28px;
 }
 
 a:active::before {
   opacity: 1;
-  width: 35%;
+  width: 22px;
 }
 </style>

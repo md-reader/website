@@ -73,6 +73,17 @@ if (import.meta.env.PROD) {
         <NuxtLink custom to="/install" v-slot="{ navigate, isExactActive }">
           <NavLink :class="{ isExactActive }" @click="navigate">Install</NavLink>
         </NuxtLink>
+        <NuxtLink custom v-slot="{ isExactActive }">
+          <NavLink :class="{ isExactActive }" target="__blank_Feedback"
+            href="https://github.com/md-reader/md-reader/issues/new/choose">Feedback
+          </NavLink>
+        </NuxtLink>
+        <NuxtLink custom v-slot="{ isExactActive }">
+          <NavLink :class="{ isExactActive }" target="__blank_Support"
+            href="https://github.com/orgs/md-reader/discussions/51">
+            Support
+          </NavLink>
+        </NuxtLink>
       </nav>
       <HeaderActions class="flex-1"></HeaderActions>
     </div>
