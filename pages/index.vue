@@ -8,25 +8,45 @@
       extension.</p>
 
     <div class="mt-10 flex items-center">
-      <span class="text-2xl xl:text-3xl mr-7 flex items-center poppins-semi-bold">
+      <NuxtLink to="/install" class="install-btn poppins-semi-bold">
         Install<UIcon class="ml-1.5 animation-bounce-right" name="i-heroicons-arrow-right-20-solid"></UIcon>
-      </span>
-      <NuxtLink to="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg" class="text-center mr-8"
-        target="_blank">
-        <img class="inline-block h-[45px] mb-2.5" src="@/assets/chrome-web-store.svg" alt="chrome-web-store">
+      </NuxtLink>
+      <NuxtLink to="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg"
+        class="text-center mr-8 -mb-2" target="_blank_Chrome">
+        <img class="inline-block h-[45px] mb-2.5" src="/images/chrome-web-store.svg" alt="chrome-web-store">
         <div class="leading-none">Chrome</div>
       </NuxtLink>
-      <NuxtLink to="https://addons.mozilla.org/firefox/addon/markdown-reader-ext/" class="text-center" target="_blank">
-        <img class="inline-block h-[45px] mb-2.5" src="@/assets/firefox.png" alt="fx-addon">
+      <NuxtLink to="https://addons.mozilla.org/firefox/addon/markdown-reader-ext/" class="text-center -mb-2"
+        target="_blank_Firefox">
+        <img class="inline-block h-[45px] mb-2.5" src="/images/Firefox.png" alt="fx-addon">
         <div class="leading-none">Firefox</div>
       </NuxtLink>
     </div>
   </div>
 
   <div class="mt-14">
-    <img v-show="!isDark" class="block dark:opacity-95 drop-shadow-lg" draggable="false" src="/images/banner-day.png" />
-    <img v-show="isDark" class="block dark:opacity-95 drop-shadow-lg" draggable="false"
-      src="/images/banner-night.png" />
+    <div v-show="isDark" class="relative">
+      <template v-for="(item, i) in previewTabs">
+        <Transition name="preview">
+          <img v-show="i === currentTab" class="block drop-shadow-lg"
+            :class="{ 'absolute top-0 left-0': i !== currentTab }" draggable="false"
+            :src="`/images/banner/dark-${i + 1}.png`" :key="item.label" />
+        </Transition>
+      </template>
+    </div>
+    <div v-show="!isDark" class="relative">
+      <template v-for="(item, i) in previewTabs">
+        <Transition name="preview">
+          <img v-show="i === currentTab" class="block drop-shadow-lg"
+            :class="{ 'absolute top-0 left-0': i !== currentTab }" draggable="false"
+            :src="`/images/banner/light-${i + 1}.png`" :key="item.label" />
+        </Transition>
+      </template>
+    </div>
+    <UTabs v-model="currentTab" :items="previewTabs" class="preview-tabs mt-8 w-96 md:w-[34rem] mx-auto" :ui="{
+      strategy: 'merge',
+      list: { background: 'bg-[#ececec] dark:bg-[#2d2d36]', tab: { active: 'dark:bg-zinc-900' } }
+    }" />
   </div>
   <Features></Features>
   <Reviews></Reviews>
@@ -43,6 +63,19 @@ const isDark = computed({
   }
 })
 
+const currentTab = ref(0)
+const previewTabs = [{
+  label: 'Basic',
+}, {
+  label: 'Usual',
+}, {
+  label: 'KaTeX',
+}, {
+  label: 'Mermaid',
+}, {
+  label: 'Gallery',
+}]
+
 </script>
 
 <style scoped>
@@ -55,6 +88,22 @@ const isDark = computed({
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
   background-image: linear-gradient(330deg, #7294ff, #a474f7);
 }
+
+.install-btn {
+  @apply text-2xl xl:text-[26px] mr-10 px-6 py-2.5 xl:px-7 xl:py-3 !text-white rounded-full flex items-center transition hover:opacity-90;
+  background-image: linear-gradient(330deg, #7294ff, #a474f7);
+}
+
+.preview-enter-active,
+.preview-leave-active {
+  transition: 0.2s;
+}
+
+.preview-leave-to,
+.preview-enter-from {
+  opacity: 0;
+}
+
 
 @keyframes bounce-right {
 

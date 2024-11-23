@@ -103,7 +103,7 @@ header.sticked {
   backdrop-filter: blur(8px);
 }
 
-.logo:deep(span) {
+.logo:deep(h1) {
   @apply lg:inline hidden;
 }
 </style>

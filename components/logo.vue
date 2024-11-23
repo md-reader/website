@@ -1,8 +1,28 @@
 <template>
   <div>
     <NuxtLink class="h-full inline-flex items-center align-bottom text-lg hover:text-inherit" to="/">
-      <img src="../assets/logo-stroke.svg" alt="logo" class="w-6 mr-2">
-      <span class="inline poppins-bold">Markdown Reader</span>
+      <img v-show="isDark" src="/logo-light.svg" alt="Markdown Reader Logo" class="w-6">
+      <img v-show="!isDark" src="/logo.svg" alt="Markdown Reader Logo" class="w-6">
+      <h1 v-show="$props.text" class="inline poppins-bold ml-2">Markdown Reader</h1>
     </NuxtLink>
   </div>
 </template>
+
+<script setup lang="ts">
+defineProps({
+  text: {
+    type: Boolean,
+    default: true
+  }
+})
+
+const colorMode = useColorMode()
+const isDark = computed({
+  get() {
+    return colorMode.value === 'dark'
+  },
+  set() {
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+  }
+})
+</script>

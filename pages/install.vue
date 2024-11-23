@@ -1,15 +1,9 @@
 <script setup lang="ts">
-import chromeIcon from '@/assets/chrome.png'
-import fxIcon from '@/assets/firefox.png'
-import edgeIcon from '@/assets/edge.png'
-import safariIcon from '@/assets/safari.png'
-
 const browsers = reactive([
   {
     name: 'Chrome',
     title: 'Chrome Web Store',
     url: 'https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg',
-    icon: chromeIcon,
     current: false,
     class: [
       'bg-[#E8F5E9]',
@@ -21,7 +15,6 @@ const browsers = reactive([
   {
     name: 'Firefox',
     title: 'Firefox Add-ons',
-    icon: fxIcon,
     url: 'https://addons.mozilla.org/firefox/addon/markdown-reader-ext',
     current: false,
     class: [
@@ -34,7 +27,6 @@ const browsers = reactive([
   {
     name: 'Edge',
     title: 'Edge Add-ons',
-    icon: edgeIcon,
     nonsupport: true,
     current: false,
     class: [
@@ -47,7 +39,6 @@ const browsers = reactive([
   {
     name: 'Safari',
     title: 'Safari Extensions',
-    icon: safariIcon,
     nonsupport: true,
     current: false,
     class: [
@@ -75,17 +66,14 @@ function detectBrowser() {
 
 
 onMounted(() => {
-  const browser = detectBrowser()
-  console.log(browser)
-  if (browser) {
-    const index = browsers.findIndex((item) => {
-      return !item.nonsupport && item.name.toLowerCase() === browser.toLowerCase()
-    })
-    console.log(index)
-    const target = browsers[index]
-    console.log(target)
-    target.current = true
-  }
+  // const browser = detectBrowser()
+  // if (browser) {
+  //   const index = browsers.findIndex((item) => {
+  //     return !item.nonsupport && item.name.toLowerCase() === browser.toLowerCase()
+  //   })
+  //   const target = browsers[index]
+  //   target.current = true
+  // }
 })
 </script>
 
@@ -99,17 +87,17 @@ onMounted(() => {
         target="_blank">
         <h3 class="poppins-semi-bold title">{{ item.title }}</h3>
         <span class="poppins-semi-bold link">
-          Install
+          Add to {{ item.name }}
           <UIcon name="i-mdi-arrow-right" class="duration-100 text-xl"></UIcon>
         </span>
-        <img class="browser-icon" draggable="false" :src="item.icon" alt="">
+        <img class="browser-icon" draggable="false" :src="`/images/${item.name}.png`" alt="">
       </NuxtLink>
       <div v-else class="card disabled" :class="item.class" :data-current="item.current">
         <h3 class="poppins-semi-bold title">{{ item.title }}</h3>
         <span class="poppins-semi-bold link !mr-0 opacity-30 dark:opacity-20">
           Coming soon
         </span>
-        <img class="browser-icon grayscale !opacity-30" draggable="false" :src="item.icon" alt="">
+        <img class="browser-icon grayscale !opacity-30" draggable="false" :src="`/images/${item.name}.png`" alt="">
       </div>
     </template>
   </div>
