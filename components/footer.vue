@@ -2,8 +2,9 @@
   <footer class="mt-44 text-center">
     <Logo class="flex-1 mb-5"></Logo>
     <div class="md:text-sm text-xs text-zinc-400 dark:text-zinc-500">
-      <span class="mr-1">
-        © 2024 Copyright <NuxtLink target="_blank_Bener" to="https://github.com/Heroor">Bener</NuxtLink>.
+      <span class="mr-3">
+        © 2024 Copyright
+        <NuxtLink target="_blank_Bener" to="https://github.com/Heroor">Bener</NuxtLink>.
       </span>
       <nav class="inline-block">
         <ul class="inline-flex gap-4">
