@@ -24,7 +24,14 @@
     </div>
   </div>
 
-  <div class="mt-14">
+  <div class="mt-24">
+    <UTabs v-model="currentTab" :items="previewTabs" class="mb-8 mx-auto px-5 max-w-[38rem]" :ui="{
+      strategy: 'merge',
+      list: {
+        background: 'bg-[#ededed] dark:bg-[#2d2d36]',
+        tab: { active: 'dark:bg-zinc-900', size: 'text-xs md:text-sm' }
+      }
+    }" />
     <div v-show="isDark === undefined" class="opacity-0 invisible">
       <img class="block" draggable="false" src="/images/banner/light-1.png" />
     </div>
@@ -46,10 +53,6 @@
         </Transition>
       </template>
     </div>
-    <UTabs v-model="currentTab" :items="previewTabs" class="preview-tabs mt-8 w-96 md:w-[34rem] mx-auto" :ui="{
-      strategy: 'merge',
-      list: { background: 'bg-[#ececec] dark:bg-[#2d2d36]', tab: { active: 'dark:bg-zinc-900' } }
-    }" />
   </div>
   <Features></Features>
   <Reviews></Reviews>
@@ -68,7 +71,7 @@ const currentTab = ref(0)
 const previewTabs = [{
   label: 'Basic',
 }, {
-  label: 'Usual',
+  label: 'Common',
 }, {
   label: 'KaTeX',
 }, {
