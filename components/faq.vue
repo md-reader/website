@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import LocalMarkdownFAQ from './LocalMarkdownFAQ.vue'
+import CommunityFAQ from './CommunityFAQ.vue'
+
 const expandMap: Record<string, boolean> = reactive({
   'About Markdown Reader': true
 })
@@ -15,6 +17,10 @@ const faqs = [
       [
         'Which browsers are supported?',
         'It is currently available for Chrome and Firefox, more browsers will be adapted in the future.'
+      ],
+      [
+        'Join the WeChat Community.',
+        CommunityFAQ
       ]
     ]
   },
