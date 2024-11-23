@@ -88,12 +88,13 @@ if (import.meta.env.PROD) {
       <HeaderActions class="flex-1"></HeaderActions>
     </div>
   </header>
+
   <div class="main-container !mt-28 px-[2rem]">
     <NuxtPage></NuxtPage>
     <Faq></Faq>
+    <Footer />
   </div>
 
-  <Footer />
   <Background v-if="isClient" :options="{ bg1: '/logo-bg-1.svg', bg2: '/logo-bg-2.svg' }" />
 </template>
 
