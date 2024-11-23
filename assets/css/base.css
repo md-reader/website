@@ -24,7 +24,6 @@
   --v-text-dark-2: rgba(235, 235, 235, 0.64);
 }
 
-/* semantic color variables for this project */
 :root.light {
   --color-primary: var(--v-primary-light-1);
 
@@ -57,43 +56,18 @@
   --color-desc: var(--v-text-dark-2);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --color-primary: var(--v-primary-dark-1);
-
-    --color-background: var(--v-black);
-    --color-background-soft: var(--v-black-soft);
-    --color-background-mute: var(--v-black-mute);
-
-    --color-border: var(--v-divider-dark-2);
-    --color-border-hover: var(--v-divider-dark-1);
-
-    --color-heading: var(--v-text-dark-1);
-    --color-text: var(--v-text-dark-1);
-    --color-desc: var(--v-text-dark-2);
-  }
-} */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
-}
-
 @font-face {
   font-family: Poppins;
   src: url('../fonts/Poppins.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Poppins Bold';
+  font-family: 'PoppinsBold';
   src: url('../fonts/Poppins-Bold.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Poppins SemiBold';
+  font-family: 'PoppinsSemiBold';
   src: url('../fonts/Poppins-SemiBold.woff') format('woff');
 }
 
@@ -116,7 +90,7 @@ body {
 h1,
 h2,
 .poppins-bold {
-  font-family: 'Poppins Bold';
+  font-family: 'PoppinsBold';
 }
 
 h2 {
@@ -128,7 +102,7 @@ p.desc {
 }
 
 .poppins-semi-bold {
-  font-family: 'Poppins SemiBold';
+  font-family: 'PoppinsSemiBold';
 }
 
 code.code-style {

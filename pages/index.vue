@@ -29,7 +29,7 @@
       strategy: 'merge',
       list: {
         background: 'bg-[#ededed] dark:bg-[#2d2d36]',
-        tab: { active: 'dark:bg-zinc-900', size: 'text-xs md:text-sm' }
+        tab: { active: 'dark:bg-zinc-900', size: 'text-xs md:text-sm', font: 'font-[PoppinsSemiBold]', }
       }
     }" />
     <div v-show="isDark === undefined" class="opacity-0 invisible">
