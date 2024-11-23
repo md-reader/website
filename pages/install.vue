@@ -88,7 +88,7 @@ onMounted(() => {
         <h3 class="poppins-semi-bold title">{{ item.title }}</h3>
         <span class="poppins-semi-bold link">
           Add to {{ item.name }}
-          <UIcon name="i-mdi-arrow-right" class="duration-100 text-xl"></UIcon>
+          <UIcon name="i-heroicons-chevron-double-right-16-solid" class="duration-100 text-xl"></UIcon>
         </span>
         <img class="browser-icon" draggable="false" :src="`/images/${item.name}.png`" alt="">
       </NuxtLink>
@@ -131,7 +131,7 @@ onMounted(() => {
 }
 
 .link {
-  @apply md:absolute bottom-5 right-8 flex items-center gap-1 leading-none text-base md:text-lg transition-[margin] duration-100 text-[--color-text];
+  @apply md:absolute bottom-5 right-8 flex items-center gap-1 md:gap-2 leading-none text-base md:text-lg transition-[margin] duration-100 text-[--color-text];
 }
 
 .browser-icon {

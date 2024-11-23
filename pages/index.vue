@@ -25,7 +25,10 @@
   </div>
 
   <div class="mt-14">
-    <div v-show="isDark" class="relative">
+    <div v-show="isDark === undefined" class="opacity-0 invisible">
+      <img class="block" draggable="false" src="/images/banner/light-1.png" />
+    </div>
+    <div v-show="isDark === true" class="relative">
       <template v-for="(item, i) in previewTabs">
         <Transition name="preview">
           <img v-show="i === currentTab" class="block drop-shadow-lg"
@@ -34,7 +37,7 @@
         </Transition>
       </template>
     </div>
-    <div v-show="!isDark" class="relative">
+    <div v-show="isDark === false" class="relative">
       <template v-for="(item, i) in previewTabs">
         <Transition name="preview">
           <img v-show="i === currentTab" class="block drop-shadow-lg"
@@ -54,13 +57,11 @@
 
 <script setup lang="ts">
 const colorMode = useColorMode()
-const isDark = computed({
-  get() {
-    return colorMode.value === 'dark'
-  },
-  set() {
-    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+const isDark = computed(() => {
+  if (colorMode.unknown) {
+    return undefined
   }
+  return colorMode.value === 'dark'
 })
 
 const currentTab = ref(0)
