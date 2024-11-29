@@ -19,6 +19,9 @@ export default <Partial<Config>>{
           '950': '#232648',
         },
       },
+      screens: {
+        xs: '480px',
+      },
     },
   },
 }

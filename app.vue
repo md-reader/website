@@ -64,9 +64,9 @@ if (import.meta.env.PROD) {
   </Head>
 
   <header ref="headerRef" class="sticky top-0 py-[1rem] px-[2rem] z-10">
-    <div class="main-container flex justify-between">
-      <Logo class="flex-1 logo"></Logo>
-      <nav class="min-w-fit flex-1 text-[15px] text-center select-none text-[--color-heading]">
+    <div class="max-w-[1300px] mx-auto flex justify-between items-center">
+      <Logo class="hidden xs:flex flex-1 logo"></Logo>
+      <nav class="min-w-fit flex-1 text-sm xs:text-[15px] text-center select-none text-[--color-heading]">
         <NuxtLink custom to="/" v-slot="{ navigate, isExactActive }">
           <NavLink :class="{ isExactActive }" @click="navigate">Home</NavLink>
         </NuxtLink>
@@ -85,11 +85,11 @@ if (import.meta.env.PROD) {
           </NavLink>
         </NuxtLink>
       </nav>
-      <HeaderActions class="flex-1"></HeaderActions>
+      <HeaderActions class="hidden xs:flex flex-1"></HeaderActions>
     </div>
   </header>
 
-  <div class="main-container !mt-28 px-[2rem]">
+  <div class="max-w-[1300px] mx-auto mt-20 xs:mt-28 px-6 xs:px-8">
     <NuxtPage></NuxtPage>
     <Faq></Faq>
     <Footer />

@@ -94,11 +94,11 @@ h2,
 }
 
 h2 {
-  @apply text-4xl xl:text-5xl !leading-tight text-center mt-52 xl:mt-60;
+  @apply text-2xl xs:text-4xl xl:text-5xl !leading-tight text-center mt-32 xs:mt-52 xl:mt-60;
 }
 
 p.desc {
-  @apply text-lg xl:text-xl mt-5 text-center;
+  @apply text-sm xs:text-lg xl:text-xl mt-5 text-center;
 }
 
 .poppins-semi-bold {

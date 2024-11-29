@@ -102,7 +102,8 @@ onMounted(() => {
     </template>
   </div>
 
-  <div class="max-w-[800px] mt-10 m-auto px-2 flex items-center justify-center gap-1 opacity-50 -mb-16">
+  <div
+    class="max-w-[800px] mt-10 m-auto px-2 text-sm xs:text-[15px] flex items-center justify-center gap-1 opacity-50 -mb-16">
     <UIcon name="i-mdi-information-outline text-base"></UIcon>
     Support for Safari and Edge is on the way!
   </div>
@@ -112,14 +113,14 @@ onMounted(() => {
 
 <style scoped>
 .install-wrap {
-  @apply m-auto max-w-[800px] gap-y-6 grid grid-rows-1 grid-cols-1 mt-24;
-  @apply md:gap-y-8 md:gap-x-12 md:grid-rows-2 md:grid-cols-2;
+  @apply m-auto max-w-[800px] gap-y-6 grid grid-rows-1 grid-cols-1 mt-16;
+  @apply md:gap-y-8 md:gap-x-12 md:grid-rows-2 md:grid-cols-2 xs:mt-24;
 }
 
 .card {
   @apply break-inside-avoid shadow ring-1 ring-gray-200 dark:ring-zinc-800 rounded-2xl select-none;
-  @apply flex justify-between items-center overflow-hidden relative h-[18] py-6 px-7 transition;
-  @apply md:block md:h-32 md:py-6;
+  @apply flex justify-between items-center overflow-hidden relative h-[18] py-7 px-5 transition;
+  @apply md:block md:h-32 md:py-6 xs:py-6 xs:px-7;
 }
 
 .card[data-current="true"] {
@@ -127,23 +128,23 @@ onMounted(() => {
 }
 
 .title {
-  @apply relative z-[1] text-xl md:text-[22px] leading-none text-[--color-text] text-right;
+  @apply relative z-[1] text-base xs:text-xl md:text-[22px] leading-none text-[--color-text] md:text-right flex-1 md:flex-initial;
 }
 
 .link {
-  @apply md:absolute bottom-5 right-8 flex items-center gap-1 md:gap-2 leading-none text-base md:text-lg transition-[margin] duration-100 text-[--color-text];
+  @apply md:absolute bottom-5 right-8 flex items-center gap-1 md:gap-2 leading-none text-sm xs:text-base md:text-lg transition-[margin] duration-100 text-[--color-text];
 }
 
 .browser-icon {
-  @apply absolute -bottom-8 md:-bottom-6 md:-left-8 -left-8 w-40 inline-block ml-1.5 transition-[width] md:opacity-80 opacity-60;
+  @apply absolute -bottom-8 md:-bottom-6 md:-left-8 -left-8 w-32 xs:w-40 inline-block ml-1.5 transition-[width] md:opacity-80 opacity-60;
 }
 
 .card:not(.disabled):hover {
-  @apply hover:scale-105;
+  @apply xs:hover:scale-105;
 }
 
 .card:not(.disabled):hover .browser-icon {
-  @apply w-44;
+  @apply xs:w-44;
 }
 
 .card:not(.disabled):hover .link .i-mdi-arrow-right {

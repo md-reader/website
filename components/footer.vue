@@ -1,7 +1,7 @@
 <template>
-  <footer class="mt-44 flex justify-between items-center max-w-[960px] mx-auto">
-    <Logo class="logo"></Logo>
-    <div class="md:text-sm text-xs text-zinc-400 dark:text-zinc-500">
+  <footer class="mt-20 xs:mt-44 flex justify-between items-center max-w-[960px] mx-auto">
+    <Logo class="hidden sm:flex logo"></Logo>
+    <div class="text-xs xs:text-sm text-zinc-400 dark:text-zinc-500 flex-1 md:flex-initial text-center sm:text-right">
       <nav class="inline-block">
         <ul class="inline-flex gap-4">
           <li>
@@ -20,7 +20,7 @@
         </ul>
       </nav>
       <span class="ml-3.5">
-        © 2024 Copyright
+        © 2024 <span class="hidden sm:inline mr-2">Copyright</span>
         <NuxtLink target="_blank_Bener" to="https://github.com/Heroor">Bener</NuxtLink>.
       </span>
     </div>

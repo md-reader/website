@@ -110,20 +110,21 @@ const faqs = [
 
 <template>
   <h2>Frequently Asked Questions</h2>
-  <div class="mt-24">
+  <div class="mt-14 xs:mt-24">
     <ul v-for="item in faqs" :key="item.title" class="max-w-[1000px] m-auto">
       <li>
         <h3
-          class="flex items-center gap-2 xl:py-5 py-4 xl:text-2xl text-xl hover:text-zinc-500 dark:hover:text-zinc-300 transition-[color] cursor-pointer"
+          class="flex items-center gap-2 py-2.5 xl:py-5 xs:py-4 text-lg xs:text-xl xl:text-2xl hover:text-zinc-500 dark:hover:text-zinc-300 transition-[color] cursor-pointer"
           @click="expandMap[item.title] = !expandMap[item.title]">
           <UIcon name="i-mdi-help-circle" class="opacity-90"></UIcon>
           <span class="poppins-semi-bold flex-1">{{ item.title }}</span>
-          <UIcon name="i-heroicons-chevron-right-20-solid" class="duration-100 !text-2xl"
+          <UIcon name="i-heroicons-chevron-right-20-solid" class="duration-100 !xs:text-2xl"
             :class="{ 'rotate-90': expandMap[item.title] }">
           </UIcon>
         </h3>
-        <ul v-show="expandMap[item.title]" class="text-base xl:text-lg px-9 py-4 text-gray-600 dark:text-gray-300">
-          <li v-for="(ques, i) in item.questions" class="mt-8 first:mt-0">
+        <ul v-show="expandMap[item.title]"
+          class="text-sm xs:text-base xl:text-lg px-7 xs:px-9 py-2 xs:py-4 text-gray-600 dark:text-gray-300">
+          <li v-for="(ques, i) in item.questions" class="mt-5 xs:mt-8 first:mt-0">
             <h4 class="mb-2 poppins-semi-bold">{{ i + 1 }}. {{ ques[0] }}</h4>
             <div v-if="typeof ques[1] === 'string'">{{ ques[1] }}</div>
             <component v-else :is="ques[1]"></component>

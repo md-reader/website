@@ -5,11 +5,6 @@
   font-weight: normal;
 }
 
-.main-container {
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
 a:hover,
 a:active {
   color: var(--color-primary);
