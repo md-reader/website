@@ -27,13 +27,13 @@ const browsers = reactive([
   {
     name: 'Edge',
     title: 'Edge Add-ons',
-    nonsupport: true,
+    url: 'https://microsoftedge.microsoft.com/addons/detail/markdown-reader/djnplooklihmkcioemdjfcednfkpiodc',
     current: false,
     class: [
       'bg-[#E4EEF8]',
-      // 'hover:bg-[#E0EDFF]',
+      'hover:bg-[#E0EDFF]',
       'dark:bg-[#1F2A35]',
-      // 'dark:hover:bg-[#2B507A]'
+      'dark:hover:bg-[#2B507A]'
     ],
   },
   {
@@ -105,7 +105,7 @@ onMounted(() => {
   <div
     class="max-w-[800px] mt-10 m-auto px-2 text-sm xs:text-[15px] flex items-center justify-center gap-1 opacity-50 -mb-16">
     <UIcon name="i-mdi-information-outline text-base"></UIcon>
-    Support for Safari and Edge is on the way!
+    Support for Safari is on the way!
   </div>
 
   <Reviews></Reviews>
@@ -119,7 +119,7 @@ onMounted(() => {
 
 .card {
   @apply break-inside-avoid shadow ring-1 ring-gray-200 dark:ring-zinc-800 rounded-2xl select-none;
-  @apply flex justify-between items-center overflow-hidden relative h-[18] py-7 px-5 transition;
+  @apply flex justify-between items-center overflow-hidden relative py-7 px-5 transition;
   @apply md:block md:h-32 md:py-6 xs:py-6 xs:px-7;
 }
 

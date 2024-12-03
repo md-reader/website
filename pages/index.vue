@@ -18,9 +18,14 @@
         <div class="leading-none">Chrome</div>
       </NuxtLink>
       <NuxtLink to="https://addons.mozilla.org/firefox/addon/markdown-reader-ext/"
-        class="hidden xs:inline-block text-center -mb-2" target="_blank_Firefox">
-        <img class="inline-block h-[45px] mb-2.5" src="/images/Firefox.png" alt="fx-addon">
+        class="hidden xs:inline-block text-center mr-8 -mb-2" target="_blank_Firefox">
+        <img class="inline-block h-[45px] mb-2.5" src="/images/Firefox.png" alt="firefox-addon">
         <div class="leading-none">Firefox</div>
+      </NuxtLink>
+      <NuxtLink to="https://microsoftedge.microsoft.com/addons/detail/markdown-reader/djnplooklihmkcioemdjfcednfkpiodc"
+        class="hidden xs:inline-block text-center -mb-2" target="_blank_Edge">
+        <img class="inline-block h-[45px] mb-2.5" src="/images/Edge.png" alt="edge-addon">
+        <div class="leading-none">Edge</div>
       </NuxtLink>
     </div>
   </div>
