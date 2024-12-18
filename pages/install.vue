@@ -13,18 +13,6 @@ const browsers = reactive([
     ],
   },
   {
-    name: 'Firefox',
-    title: 'Firefox Add-ons',
-    url: 'https://addons.mozilla.org/firefox/addon/markdown-reader-ext',
-    current: false,
-    class: [
-      'bg-[#FFEBE6]',
-      'hover:bg-[#f9e5e0]',
-      'dark:bg-[#4A1F3F]',
-      'dark:hover:bg-[#5D2852]'
-    ],
-  },
-  {
     name: 'Edge',
     title: 'Edge Add-ons',
     url: 'https://microsoftedge.microsoft.com/addons/detail/markdown-reader/djnplooklihmkcioemdjfcednfkpiodc',
@@ -34,6 +22,18 @@ const browsers = reactive([
       'hover:bg-[#E0EDFF]',
       'dark:bg-[#1F2A35]',
       'dark:hover:bg-[#2B507A]'
+    ],
+  },
+  {
+    name: 'Firefox',
+    title: 'Firefox Add-ons',
+    url: 'https://addons.mozilla.org/firefox/addon/markdown-reader-ext',
+    current: false,
+    class: [
+      'bg-[#FFEBE6]',
+      'hover:bg-[#f9e5e0]',
+      'dark:bg-[#4A1F3F]',
+      'dark:hover:bg-[#5D2852]'
     ],
   },
   {
