@@ -21,6 +21,12 @@ importers:
         specifier: ^2.13.0
         version: 2.13.0(axios@0.27.2)(nuxt@3.6.5(@types/node@18.17.1)(encoding@0.1.13)(rollup@3.27.0)(terser@5.19.2))(rollup@3.27.0)(vite@4.3.9(@types/node@18.17.1)(terser@5.19.2))(vue@3.3.4)
     devDependencies:
+      '@iconify-json/heroicons':
+        specifier: ^1.2.2
+        version: 1.2.2
+      '@iconify-json/ri':
+        specifier: ^1.2.5
+        version: 1.2.5
       '@nuxt/devtools':
         specifier: latest
         version: 0.7.2(nuxt@3.6.5(@types/node@18.17.1)(encoding@0.1.13)(rollup@3.27.0)(terser@5.19.2))(rollup@3.27.0)(vite@4.3.9(@types/node@18.17.1)(terser@5.19.2))
@@ -609,11 +615,14 @@ packages:
   '@iconify-json/fluent@1.2.7':
     resolution: {integrity: sha512-R5Duyek2QCPxHP0NlcgYsaSFe0ftiMiL17fJrCxop0OKgZbUuqpgruGSmnRqljjvsdv3TdR7HV5XobGYejUIBw==}
 
-  '@iconify-json/heroicons@1.1.20':
-    resolution: {integrity: sha512-puNt1al/rDw8Rb5x8sfk20UA8AQjMskLMh63nSUBj+8I0lQ7LtX+0Qn8wow2xTXTEsynJ9xXLD8Aat53e0qi8A==}
+  '@iconify-json/heroicons@1.2.2':
+    resolution: {integrity: sha512-qoW4pXr5kTTL6juEjgTs83OJIwpePu7q1tdtKVEdj+i0zyyVHgg/dd9grsXJQnpTpBt6/VwNjrXBvFjRsKPENg==}
 
   '@iconify-json/mdi@1.1.64':
     resolution: {integrity: sha512-zGeo5TjhNFAY6FmSDBLAzDO811t77r6v/mDi7CAL9w5eXqKez6bIjk8R9AL/RHIeq44ALP4Ozr4lMqFTkHr7ug==}
+
+  '@iconify-json/ri@1.2.5':
+    resolution: {integrity: sha512-kWGimOXMZrlYusjBKKXYOWcKhbOHusFsmrmRGmjS7rH0BpML5A9/fy8KHZqFOwZfC4M6amObQYbh8BqO5cMC3w==}
 
   '@iconify-json/solar@1.2.1':
     resolution: {integrity: sha512-LA3WZ7HOi5O/sEc2M+BcQNJYNFDnUKP+ZldmNf8kwndnCuFMo+fukt6tSu4BqYRsRgp/Ku4xnys1JGBDi+QtCQ==}
@@ -4727,11 +4736,15 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/heroicons@1.1.20':
+  '@iconify-json/heroicons@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
   '@iconify-json/mdi@1.1.64':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/ri@1.2.5':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -5071,7 +5084,7 @@ snapshots:
       '@egoist/tailwindcss-icons': 1.7.4(tailwindcss@3.4.1)
       '@headlessui/tailwindcss': 0.2.0(tailwindcss@3.4.1)
       '@headlessui/vue': 1.7.16(vue@3.3.4)
-      '@iconify-json/heroicons': 1.1.20
+      '@iconify-json/heroicons': 1.2.2
       '@nuxt/kit': 3.10.2(rollup@3.27.0)
       '@nuxtjs/color-mode': 3.3.2(rollup@3.27.0)
       '@nuxtjs/tailwindcss': 6.11.4(rollup@3.27.0)

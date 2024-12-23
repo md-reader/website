@@ -11,6 +11,8 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@iconify-json/heroicons": "^1.2.2",
+    "@iconify-json/ri": "^1.2.5",
     "@nuxt/devtools": "latest",
     "@types/node": "^18.17.1",
     "nuxt": "^3.6.5"
