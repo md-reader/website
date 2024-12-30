@@ -4,15 +4,18 @@
     <div class="text-xs xs:text-sm text-zinc-400 dark:text-zinc-500 flex-1 md:flex-initial text-center sm:text-right">
       <nav class="inline-block">
         <ul class="inline-flex gap-4">
-          <li>
+          <!-- <li>
             <NuxtLink target="_blank_GitHub" to="https://github.com/md-reader/md-reader">GitHub</NuxtLink>
-          </li>
+          </li> -->
           <li>
             <NuxtLink target="_blank_Feedback" to="https://github.com/md-reader/md-reader/issues/new/choose">Feedback
             </NuxtLink>
           </li>
           <li>
             <NuxtLink target="_blank_Support" to="https://github.com/orgs/md-reader/discussions/64">Support</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/privacy">Privacy</NuxtLink>
           </li>
           <li>
             <NuxtLink to="mailto:mkdreader@gmail.com">Email</NuxtLink>
