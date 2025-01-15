@@ -136,7 +136,7 @@ const animate = (currentTime: number) => {
   config.lastTime = currentTime
 
   drawBackground(deltaTime)
-  animationFrameId = requestAnimationFrame(animate)
+  // animationFrameId = requestAnimationFrame(animate)
 }
 
 watch(() => props.options, (newOptions) => {
@@ -169,7 +169,10 @@ onMounted(() => {
   let resizeTimeout: number
   const handleResize = () => {
     clearTimeout(resizeTimeout)
-    resizeTimeout = window.setTimeout(resizeCanvas, 100)
+    resizeTimeout = window.setTimeout(() => {
+      resizeCanvas()
+      animationFrameId = requestAnimationFrame(animate)
+    }, 100)
   }
 
   window.addEventListener('resize', handleResize)
