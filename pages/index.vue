@@ -13,19 +13,19 @@
         <UIcon class="ml-1.5 animation-bounce-right" name="i-heroicons-arrow-right-20-solid" />
       </NuxtLink>
       <NuxtLink to="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg"
-        class="hidden xs:inline-block text-center mr-4 sm:mr-8 -mb-2" target="_blank_Chrome">
-        <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/chrome-web-store.svg" alt="chrome-web-store">
-        <div class="leading-none">Chrome</div>
+        class="hidden xs:inline-block text-center mr-5 sm:mr-8 -mb-2" target="_blank_Chrome">
+        <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/Chrome.png" alt="chrome-web-store">
+        <div class="leading-none text-sm sm:text-[15px]">Chrome</div>
       </NuxtLink>
       <NuxtLink to="https://microsoftedge.microsoft.com/addons/detail/markdown-reader/djnplooklihmkcioemdjfcednfkpiodc"
         class="hidden xs:inline-block text-center mr-6 sm:mr-8 -mb-2" target="_blank_Edge">
-        <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/Edge.png" alt="edge-addon">
-        <div class="leading-none">Edge</div>
+        <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/Edge.png" alt="edge-addons">
+        <div class="leading-none text-sm sm:text-[15px]">Edge</div>
       </NuxtLink>
       <NuxtLink to="https://addons.mozilla.org/firefox/addon/markdown-reader-ext/"
         class="hidden xs:inline-block text-center -mb-2" target="_blank_Firefox">
-        <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/Firefox.png" alt="firefox-addon">
-        <div class="leading-none">Firefox</div>
+        <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/Firefox.png" alt="firefox-addons">
+        <div class="leading-none text-sm sm:text-[15px]">Firefox</div>
       </NuxtLink>
     </div>
   </div>
@@ -100,7 +100,7 @@ const previewTabs = [{
 }
 
 .install-btn {
-  @apply text-xl xs:text-2xl xl:text-[26px] mr-10 px-6 py-2.5 xl:px-7 xl:py-3 !text-white rounded-full flex items-center transition hover:opacity-90;
+  @apply text-lg xs:text-xl sm:text-2xl xl:text-[26px] mr-8 sm:mr-10 px-5 sm:px-6 py-2 sm:py-2.5 xl:px-7 xl:py-3 !text-white rounded-full flex items-center transition hover:opacity-90;
   background-image: linear-gradient(330deg, #7294ff, #a474f7);
 }
 
