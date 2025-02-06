@@ -109,7 +109,7 @@ const faqs = [
 </script>
 
 <template>
-  <h2>Frequently Asked Questions</h2>
+  <h2 id="faq">Frequently Asked Questions</h2>
   <div class="mt-14 xs:mt-24">
     <ul v-for="item in faqs" :key="item.title" class="max-w-[1000px] m-auto">
       <li>

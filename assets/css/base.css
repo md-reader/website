@@ -95,6 +95,7 @@ h2,
 
 h2 {
   @apply text-2xl xs:text-4xl xl:text-5xl !leading-tight text-center mt-32 xs:mt-52 xl:mt-60;
+  scroll-margin-top: 150px;
 }
 
 p.desc {
