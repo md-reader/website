@@ -78,10 +78,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <h2 class="mt-0 text-center">Get started in seconds!</h2>
-  <p class="desc">Install Markdown Reader in your favorite browser</p>
+  <h2 data-aos="fade-in-up" class="mt-0 text-center">Get started in seconds!</h2>
+  <p data-aos="fade-in-up" class="desc">Install Markdown Reader in your favorite browser</p>
 
-  <div class="install-wrap">
+  <div data-aos="fade-in-up" class="install-wrap">
     <template v-for="item in browsers" :key="item.name">
       <NuxtLink v-if="!item.nonsupport" :to="item.url" class="card" :class="item.class" :data-current="item.current"
         target="_blank">
@@ -102,8 +102,8 @@ onMounted(() => {
     </template>
   </div>
 
-  <div
-    class="max-w-[800px] mt-10 m-auto px-2 text-sm xs:text-[15px] flex items-center justify-center gap-1 opacity-50 -mb-16">
+  <div data-aos="fade-in-up" data-aos-delay="100"
+    class="max-w-[800px] mt-10 m-auto px-2 text-sm xs:text-[15px] flex items-center justify-center gap-1 opacity-50 -mb-50px">
     <UIcon name="i-mdi-information-outline text-base"></UIcon>
     Support for Safari is on the way!
   </div>

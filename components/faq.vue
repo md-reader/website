@@ -109,9 +109,9 @@ const faqs = [
 </script>
 
 <template>
-  <h2 id="faq">Frequently Asked Questions</h2>
-  <div class="mt-14 xs:mt-24">
-    <ul v-for="item in faqs" :key="item.title" class="max-w-[1000px] m-auto">
+  <h2 data-aos="fade-up" id="faq">Frequently Asked Questions</h2>
+  <div data-aos="fade-up" class="mt-14 xs:mt-24">
+    <ul v-for="(item, i) in faqs" :key="item.title" class="max-w-[1000px] m-auto">
       <li>
         <h3
           class="flex items-center gap-2 py-2.5 xl:py-5 xs:py-4 text-lg xs:text-xl xl:text-2xl hover:text-zinc-500 dark:hover:text-zinc-300 transition-[color] cursor-pointer"

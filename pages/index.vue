@@ -1,28 +1,35 @@
 <template>
   <div class="px-8 xs:px-[50px]">
-    <h1 class="text-[40px] xs:text-5xl xl:text-6xl !leading-[1.1] md:w-[700px] w-auto">
+    <h1 data-aos="fade-in-up" data-aos-offset="0"
+      class="text-[40px] xs:text-5xl xl:text-6xl !leading-[1.1] md:w-[700px] w-auto">
       Effortless <span class="logo-text">Markdown</span>
       Reading for Everyone!
     </h1>
-    <p class="text-base xs:text-lg xl:text-xl mt-6">Turn Markdown into beautifully rendered pages with this powerful
+    <p data-aos="fade-in-up" data-aos-offset="0" data-aos-delay="250" class="text-base xs:text-lg xl:text-xl mt-6">
+      Turn Markdown into
+      beautifully rendered pages with this powerful
       browser extension.</p>
 
     <div class="mt-6 xs:mt-10 flex items-center">
-      <NuxtLink to="/install" class="install-btn poppins-semi-bold">
+      <NuxtLink data-aos="fade-in" data-aos-offset="0" data-aos-delay="400" to="/install"
+        class="install-btn poppins-semi-bold">
         Install
         <UIcon class="ml-1.5 animation-bounce-right" name="i-heroicons-arrow-right-20-solid" />
       </NuxtLink>
-      <NuxtLink to="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg"
+      <NuxtLink data-aos="fade-left" data-aos-offset="0" data-aos-delay="600"
+        to="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg"
         class="hidden xs:inline-block text-center mr-5 sm:mr-8 -mb-2" target="_blank_Chrome">
         <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/Chrome.png" alt="chrome-web-store">
         <div class="leading-none text-sm sm:text-[15px]">Chrome</div>
       </NuxtLink>
-      <NuxtLink to="https://microsoftedge.microsoft.com/addons/detail/markdown-reader/djnplooklihmkcioemdjfcednfkpiodc"
+      <NuxtLink data-aos="fade-left" data-aos-offset="0" data-aos-delay="650"
+        to="https://microsoftedge.microsoft.com/addons/detail/markdown-reader/djnplooklihmkcioemdjfcednfkpiodc"
         class="hidden xs:inline-block text-center mr-6 sm:mr-8 -mb-2" target="_blank_Edge">
         <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/Edge.png" alt="edge-addons">
         <div class="leading-none text-sm sm:text-[15px]">Edge</div>
       </NuxtLink>
-      <NuxtLink to="https://addons.mozilla.org/firefox/addon/markdown-reader-ext/"
+      <NuxtLink data-aos="fade-left" data-aos-offset="0" data-aos-delay="700"
+        to="https://addons.mozilla.org/firefox/addon/markdown-reader-ext/"
         class="hidden xs:inline-block text-center -mb-2" target="_blank_Firefox">
         <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/Firefox.png" alt="firefox-addons">
         <div class="leading-none text-sm sm:text-[15px]">Firefox</div>
@@ -30,7 +37,7 @@
     </div>
   </div>
 
-  <div class="hidden sm:block mt-24">
+  <div data-aos="fade-in-up" data-aos-offset="0" data-aos-delay="200" class="hidden sm:block mt-24">
     <UTabs v-model="currentTab" :items="previewTabs" class="mb-8 mx-auto px-5 max-w-[38rem]" :ui="{
       strategy: 'merge',
       list: {

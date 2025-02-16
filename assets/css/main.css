@@ -9,3 +9,25 @@ a:hover,
 a:active {
   color: var(--color-primary);
 }
+
+[data-aos='fade-in-up'] {
+  opacity: 0;
+  transition: transform 0.8s, opacity 1s !important;
+  transform: translateY(8%);
+}
+
+[data-aos='fade-in-up'].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-aos='fade-in-down'] {
+  opacity: 0;
+  transition: transform 0.8s, opacity 1s !important;
+  transform: translateY(-25%);
+}
+
+[data-aos='fade-in-down'].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}

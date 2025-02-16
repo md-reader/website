@@ -25,7 +25,7 @@ defineProps({
 
 <template>
   <div class="flex justify-around items-center mt-20 xs:mt-32 xl:mt-52">
-    <div class="flex-1 max-w-[500px] lg:max-w-[600px]">
+    <div data-aos="fade-up" class="flex-1 max-w-[500px] lg:max-w-[600px]">
       <div class="poppins-semi-bold flex items-center gap-2 text-[22px] xs:text-3xl leading-normal">
         <UIcon v-if="icon" :name="icon" />
         {{ title }}
@@ -34,7 +34,7 @@ defineProps({
       <div class="pt-6 xl:pt-4 px-3 text-base xs:text-lg xl:text-xl xl:text-gray-600 xl:dark:text-gray-300">{{ desc }}
       </div>
     </div>
-    <img draggable="false" :src="src" class="hidden xl:block max-w-[500px] drop-shadow-md"
-      :class="{ 'order-first': reverse }" />
+    <img :data-aos="reverse ? 'fade-right' : 'fade-left'" data-aos-delay="200" draggable="false" :src="src"
+      class="hidden xl:block max-w-[500px] drop-shadow-md" :class="{ 'order-first': reverse }" />
   </div>
 </template>

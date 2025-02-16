@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Background from "./components/background.client.vue";
+import aos from 'aos'
+import 'aos/dist/aos.css'
 import '~/assets/css/main.css'
 
 const isClient = ref(false)
@@ -17,6 +19,11 @@ function headerStick() {
 }
 
 onMounted(() => {
+  aos.init({
+    once: true,
+    offset: 160,
+    easing: 'ease-in-out',
+  })
   headerStick()
   window.addEventListener('scroll', headerStick);
   isClient.value = true
@@ -63,7 +70,7 @@ if (import.meta.env.PROD) {
     <Title>Markdown Reader</Title>
   </Head>
 
-  <header ref="headerRef" class="sticky top-0 py-[1rem] px-[2rem] z-10">
+  <header data-aos="fade-in-down" data-aos-offset="0" ref="headerRef" class="sticky top-0 py-[1rem] px-[2rem] z-10">
     <div class="max-w-[1300px] mx-auto flex justify-between items-center">
       <Logo class="hidden xs:flex flex-1 logo"></Logo>
       <nav class="min-w-fit flex-1 text-sm xs:text-[15px] text-center select-none text-[--color-heading]">
