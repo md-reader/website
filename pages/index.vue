@@ -11,24 +11,23 @@
       browser extension.</p>
 
     <div class="mt-6 xs:mt-10 flex items-center">
-      <NuxtLink data-aos="fade-in" data-aos-offset="0" data-aos-delay="400" to="/install"
-        class="install-btn poppins-semi-bold">
+      <NuxtLink data-aos="fade-in-down" data-aos-offset="0" to="/install" class="install-btn poppins-semi-bold">
         Install
         <UIcon class="ml-1.5 animation-bounce-right" name="i-heroicons-arrow-right-20-solid" />
       </NuxtLink>
-      <NuxtLink data-aos="fade-left" data-aos-offset="0" data-aos-delay="600"
+      <NuxtLink data-aos="fade-left" data-aos-offset="0" data-aos-delay="400"
         to="https://chromewebstore.google.com/detail/medapdbncneneejhbgcjceippjlfkmkg"
         class="hidden xs:inline-block text-center mr-5 sm:mr-8 -mb-2" target="_blank_Chrome">
         <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/Chrome.png" alt="chrome-web-store">
         <div class="leading-none text-sm sm:text-[15px]">Chrome</div>
       </NuxtLink>
-      <NuxtLink data-aos="fade-left" data-aos-offset="0" data-aos-delay="650"
+      <NuxtLink data-aos="fade-left" data-aos-offset="0" data-aos-delay="450"
         to="https://microsoftedge.microsoft.com/addons/detail/markdown-reader/djnplooklihmkcioemdjfcednfkpiodc"
         class="hidden xs:inline-block text-center mr-6 sm:mr-8 -mb-2" target="_blank_Edge">
         <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/Edge.png" alt="edge-addons">
         <div class="leading-none text-sm sm:text-[15px]">Edge</div>
       </NuxtLink>
-      <NuxtLink data-aos="fade-left" data-aos-offset="0" data-aos-delay="700"
+      <NuxtLink data-aos="fade-left" data-aos-offset="0" data-aos-delay="500"
         to="https://addons.mozilla.org/firefox/addon/markdown-reader-ext/"
         class="hidden xs:inline-block text-center -mb-2" target="_blank_Firefox">
         <img class="inline-block h-[35px] sm:h-[45px] mb-2.5" src="/images/Firefox.png" alt="firefox-addons">
@@ -37,7 +36,7 @@
     </div>
   </div>
 
-  <div data-aos="fade-in-up" data-aos-offset="0" data-aos-delay="200" class="hidden sm:block mt-24">
+  <div data-aos="fade-in-up" data-aos-offset="0" class="hidden sm:block mt-24">
     <UTabs v-model="currentTab" :items="previewTabs" class="mb-8 mx-auto px-5 max-w-[38rem]" :ui="{
       strategy: 'merge',
       list: {
